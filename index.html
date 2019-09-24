@@ -1130,8 +1130,9 @@
                             <strong>تبقى حتى نهاية تخفيض السعر</strong>
                         </h5>
                                                 <div class="row justify-content-center mb-2" style="margin-top:20px">
-                                                        <div class="col-md-4">
-                                                            <span class="inventory">
+                                                        <div class="col-md-12" style="padding-right:30px;padding-left:30px;">
+                                                            <span class="inventory" style="text-align: center;
+                                                            display: block;">
                                                                 اسرع ! فقط <span id="inventory">553</span> عبوة في المخزن</span>
                                                             <div class="w3-light-grey">
                                                                 <div id="myBar" class="w3-container w3-green" style="height:24px;width:2%"></div>
@@ -1298,6 +1299,55 @@
             }
             update();
         });
+
+        let started = 0;
+
+$(function () {
+    var oTop = $('.counter-red').offset().top - window.innerHeight;
+    $(window).scroll(function () {
+        var pTop = $(window).scrollTop();
+        // console.log(pTop + ' - ' + oTop); //just for your debugging
+        if (pTop > oTop && started == 0) {
+            started = 1;
+            move();
+        }
+    });
+});
+
+
+var inventory = [553, 423, 390, 218, 212, 120, 80, 30];
+
+function move() {
+    var elem = document.getElementById("myBar");
+    var invetorySpan = document.getElementById('inventory');
+
+    var width = 1;
+    var id = setInterval(frame, 600);
+    var inventoryInterval;
+
+    function frame() {
+        if (width >= 40) {
+            clearInterval(id);
+            inventoryInterval = setInterval(decreaseInventory, 1000)
+        } else {
+            width++;
+            elem.style.width = width + '%';
+            invetorySpan.innerText = inventory[0]
+        }
+    }
+
+    function decreaseInventory() {
+        if (width >= 80) {
+            clearInterval(inventoryInterval);
+        } else {
+            if (width % 10 == 0)
+                invetorySpan.innerText = inventory[width / 10];
+
+            width++;
+            elem.style.width = width + '%';
+        }
+    }
+}
         
     </script>
 </body>
