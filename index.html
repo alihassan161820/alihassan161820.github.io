@@ -5,6 +5,8 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" name="viewport">
     <meta content="{{{ csrf_token }}}" name="csrf-token">
+    <!-- <link href="css/bootstrap-4.3.0.min.css" rel="stylesheet"> -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
         integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" rel="stylesheet">
@@ -16,6 +18,25 @@
     <link href="css/flags32-iso-3166-1-alpha-2.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/lander.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+<style>
+        .firstConatinerImg{
+  position: relative;
+        }
+        .firstConatinerImg::after {
+  content: "";
+  background-size: contain;
+  background-image:url('./images/bg.png');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+    </style>
 
 
 </head>
@@ -23,11 +44,6 @@
 <body data-gr-c-s-loaded="true" data-offset="111.328" data-spy="scroll" data-target="#page-nav">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="page-nav" style="position: relative">
         <div class="container">
-            <!-- <a class="navbar-brand"><img alt=" Keto Weight Loss logo" src="images/logo.png" width="100px"></a> -->
-            <!-- <a class="order-btn font-weight-bold px-4 flex-column" id="order_now" role="button"
-                style="width: 160px; display: none;">
-                <div class="nav-btn_color text-center" style="height:33px;">أكتشف الأن السعر المخفض</div>
-            </a> -->
             <a class="order-btn font-weight-bold px-4 flex-column d-flex" id="free_shipping" role="button"
                 style="width: 120px;">
                 <div class="row pr-3" style="border: 1px solid rgba(0,0,0,.1); border-radius:.25rem">
@@ -52,7 +68,7 @@
     </nav>
     <main>
         <div class="container-fluid">
-            <div class="row" style="padding:10px;background-image:url('./images/bg.png');background-size: contain;">
+            <div class="row firstConatinerImg" style="padding:10px;">
                 <div class="col-12">
                     <h2 class="mh-title-2 mb-0 mt-1 text-danger">
                         البديل الطبيعي والمنافس الوحيد لعمليات بالون المعدة
@@ -65,7 +81,7 @@
                     <ul class="mh-list mt-2 mb-1 mb-sm-2 px-0 pt-md-2">
                         <li class="list-icon-feature-belly">يعطي الإحساس بالشبع وسد الشهية بنسبة تصل إلى 70%
                             من آول آسبوع</li>
-                        <li class="list-icon-feature-apple">يزيدمن معدل حرق الدهون بنسبة 25٪ بعد آول 10 ايام
+                        <li class="list-icon-feature-apple">يزيد من معدل حرق الدهون بنسبة 25٪ بعد أول 10 ايام
                         </li>
                         <li class="list-icon-feature-man">يتخلص من السموم بشكل آمن وطبيعي</li>
                         <li class="list-icon-feature-pill-bottle">يمد الجسم بالطاقة والشعور بالمزاج الجيد
@@ -79,7 +95,72 @@
     font-size: 14px;
                         }
                     </style>
-                    <div class="row" style="    display: flex;
+                     <div class="row firstSectionPhotos" style="    display: flex;
+                     justify-content: center;">
+                             <div class="col-2">
+                                 <img alt="Vegetarian" src="images/icon_nutrition_gluten_free.svg">
+                                 <div class="txt">Gluten-Free</div>
+                             </div>
+                             <div class="col-2">
+                                 <img alt="Gluten free" src="images/icon_nutrition_all_natural.svg">
+                                 <div class="txt">100% Natural</div>
+                             </div>
+                             <div class="col-2">
+                                 <img alt="Dairy free" src="images/icon_nutrition_dairy_free.svg">
+                                 <div class="txt">Dairy-Free</div>
+                             </div>
+                             <div class="col-2">
+                                 <img alt="GMO free" src="images/icon_nutrition_gmo_free.svg">
+                                 <div  class="txt">GMO-Free</div>
+                             </div>
+                             <div class="col-2">
+                                 <img alt="Soy free" src="images/icon_nutrition_soy_free.svg">
+                                 <div class="txt">Soy-Free</div>
+                             </div>
+                         </div>
+                         <style>
+                             .cc {
+                                 display: flex;
+                                 flex-direction: row;
+                                 justify-content: center;
+                             }
+                             @media (max-width: 769px){
+                                 .firstSectionPhotosleft{
+                                     display: flex !important;
+                                 }
+                                 .firstSectionPhotos{
+                                     display: none !important;
+                                 }
+                             }
+                             @media (min-width: 769px){
+                                 .firstSectionPhotosleft{
+                                     display: none !important;
+                                 }
+                                 .firstSectionPhotos{
+                                     display: flex !important;
+                                 }
+                             }
+                         </style>
+                         <div class="row firstSectionPhotos" style="    display: flex;
+                         justify-content: center;align-items: center;">
+                             <div class="col-3 col-md-2">
+                                 <img class="resp-img" src="images/stamp.png">
+                             </div>
+                             <div class="col-3 col-md-2 cc">
+                                 <img class="resp-img" src="images/icon_gmp.svg">
+                             </div>
+                             <div class="col-3 col-md-2 cc">
+                                 <img class="resp-img" src="images/icon_iso_9001.svg">
+                             </div>
+                             <div class="col-3 col-md-2 cc">
+                                 <img class="resp-img" src="images/icon_fssai.svg">
+                             </div>
+                         </div>
+                  
+                </div>
+                <div class="col-md-6" style="z-index:1">
+                    <img src="./images/log.png" style="max-width:100%">
+                    <div class="row firstSectionPhotosleft" style="    display: flex;
                     justify-content: center;">
                             <div class="col-2">
                                 <img alt="Vegetarian" src="images/icon_nutrition_gluten_free.svg">
@@ -109,8 +190,9 @@
                                 justify-content: center;
                             }
                         </style>
-                        <div class="row" style="    display: flex;
-                        justify-content: center;align-items: center;">
+                        <div class="row firstSectionPhotosleft" style="    display: flex;
+                        justify-content: center;align-items: center;height: 140;
+    max-height: 140px;">
                             <div class="col-3 col-md-2">
                                 <img class="resp-img" src="images/stamp.png">
                             </div>
@@ -125,16 +207,12 @@
                             </div>
                         </div>
                 </div>
-                <div class="col-md-6" style="z-index:1">
-                    <img src="./images/log.png" style="max-width:100%">
-
-                </div>
             </div>
         </div>
         <section class="container container-patch">
             <div class="row color-box py-5">
                 <div class="col">
-                    <h3 class="text-center pb-4">العقبات التي تواجهك أثناء فقدان وزنك فهي ستنتهي مع Organic Balloon</h3>
+                    <h3 class="text-center pb-4">العقبات التي تواجهك أثناء فقدان وزنك ستنتهي مع Organic Balloon</h3>
                     <div class="row d-flex justify-content-center" style="font-size:18px;">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
@@ -160,45 +238,26 @@
                 </div>
             </div>
         </section>
-        <section class="py-4 py-md-5" id="panel-why-keto">
-            <div class="container container-patch">
-                <div class="row">
+        <div class="container container-patch">
+            <div class="row" >
+                    <section class="py-4 py-md-5" style="background: lightblue;" id="panel-why-keto">
                     <div class="col">
                         <article>
-                            <!-- <div class="ps-header-holder text-center">
-                                <div class="row align-items-center center">
-                                    <div class="col">
-                                        <header class="ps-header text-black">
-                                            <h2 class="ps-header-title">ما الذي يميز Organic Ballon عن أي منتج آخر؟
-                                            </h2>
-                                            <hr class="ps-header-title-line">
-                                        </header>
-                                    </div>
-                                </div>
-                            </div> -->
+                         
                             <div class="ps-body text-center px-sm-3 px-2">
                                 <p>
-                                    على عكس العديد من ادوية التخسيس التي تسبب خلل في وظائف الجسم وترفع معدلات الأيض في
-                                    الجسم مما يؤثر على كفاءة القلب وخلايا المخ والمناعة . ،
-                                    ، ومن هنا يكمن السر في تميز Organic Balloon عن أي منتج آخر حيث أنه طريقة فعالة وآمنة
-                                    في تخليص الجسم من الدهون والكوليسترول الزائد دون حدوث أي خلل في وظائفه مما يؤدي إلى
-                                    فقدان الترهلات نهائيا دون رجعة وبالتالي الوصول للوزن المثالي بصورة صحية آمنة على عكس
-                                    طرق التخسيس الأخرى باهظة الثمن
+                                    على عكس أدوية التخسيس التي تسبب خلل في وظائف الجسم وتؤثر على كفاءة القلب وخلايا المخ والمناعة، يكمن السر في اختلاف Organic Balloon عن أي منتج آخر فيأنه أكثر فاعلية وآمان في تخليص الجسم نت الدهون والترهلات دون رجعة وبدون حدوث خلل في وظائف الجسم للوصول إلى الوزن المثالي بصورة صحية وآمنة، لذلك يناسب أورجانيك بالون جميع أنماط حياتكم وأعماركم  
                                 </p>
                                 <p>
-                                    ،
-
-                                    لذلك يناسب أورجانيك بالون جميع أنماط حياتكم سواء كنتم رجالاً أو نساءً ، وأيضا يناسب
-                                    العاملين من الأباء والأمهات ، ومحبى المظهر من أجل لياقتهم البدنية. .. ،
-                                    .
-                                </p>
+                                                                               
+                                                            </p>
                                 <p></p>
                             </div>
                         </article>
                     </div>
+                </section>
                 </div>
             </div>
-        </section>
         <div class="two-by-two-panel-section-holder container container-patch">
             <div class="row">
                 <div class="col-12 col-sm-6 pr-1 py-4 py-md-5" id="panel-proven-results">
@@ -208,7 +267,7 @@
                         </header>
                         <div class="ps-body text-white">
                             <p>
-                                أكثر من 5،000 عميل سعيد بما وصل له من نتائج مذهلة لـتجريب Organic Balloon . إنها فرصة
+                                أكثر من 5000 عميل سعيد بما وصل له من نتائج مذهلة لـتجريب Organic Balloon فرصة
                                 رائعة للا
                                 نضمام إلينا الآنوالاقتراب من تحقيق هدفك في الوصول للوزن المثالي
                             </p>
@@ -238,7 +297,7 @@
                                 بالتأكيد ليس هناك برنامج غذائي معقد مع Organic Balloon ولن تحتاج أيضًا إالى كبسولات لأنه
                                 ببساطة
                                 مكملاً غذائياً عالي الجودة وها هى طريقة استخدامه
-                                (وضع كيس واحد على كوب من الماء أو عصير طازج حسب اختيارك قبل الوجبة بنصف ساعة) .
+                                (وضع كيس واحد على كوب من الماء أو عصير طازج حسب اختيارك قبل الوجبة بنصف ساعة) 
                             </p>
                         </div>
                     </div>
@@ -259,7 +318,7 @@
                 </div>
             </div>
         </div>
-        <section class="py-4 py-md-5" id="panel-why-keto-works">
+        <!-- <section class="py-4 py-md-5" id="panel-why-keto-works">
             <div class="container container-patch">
                 <div class="row">
                     <div class="col">
@@ -268,7 +327,7 @@
                                 <div class="row align-items-center center">
                                     <div class="col">
                                         <header class="ps-header text-black">
-                                            <h2 class="ps-header-title">سر فاعلية Organic Balloon ؟ </h2>
+                                            <h2 class="ps-header-title">سر فاعلية Organic Balloon  </h2>
                                             <hr class="ps-header-title-line">
                                         </header>
                                     </div>
@@ -277,7 +336,7 @@
                             <div class="ps-body text-center px-sm-3 px-2">
                                 <p>
                                     السر في فاعليته هو احتوائه على قشور السيليوم فهو نظام رائع لحرق الدهون من جميع أجزاء
-                                    الجسم والوصول للوزن المثالي المرغوب فيه،ويحافظ ايضاً معدل السكر فى الجسم حتى لا تصاب
+                                    الجسم والوصول للوزن المثالي المرغوب فيه، ويحافظ ايضاً معدل السكر فى الجسم حتى لا تصاب
                                     بمرض السكري بسبب نقص حاد فى الانسولين بالجسم
                                 </p>
                                 <p>
@@ -292,7 +351,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <div class="container container-patch" id="panel-how-keto-works">
             <div class="row ">
                 <div class="col text-center">
@@ -305,9 +364,8 @@
             <div class="row d-flex ps-body">
                 <div class="col-12 mb-2 d-flex px-1">
                     <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">strengthens & repairs</h4>
-                        يحسن من الحالة النفسية ويعيد الثقة في النفس للشخص الذي يريد إنقاص وزنه لما يلاحظه من إنقاص وزنه
-                        بشكل ملحوظ.
+                        <h4 class="text-danger">قشور السيليوم</h4>
+                          تحتوي على نسبة عالية من الألياف التي تساعد على الإحساس بالشبع بنسبة 70% فعند اختلاطها بالماء تتضخم وتملأ المعدة بطريقة تشبه بالون المعدة فتعطي الإحساس بالشبع وإبطاء عملية تفريغ المعدة لمدة تزيد عن 7 ساعات 
                     </div>
                     <div class="col-sm-6">
                         <img src="./images/cel.jpeg" style="max-width: 100%">
@@ -318,17 +376,15 @@
                         <img src="./images/sansa.jpeg" style="max-width: 100%">
                     </div>
                     <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">Conditions</h4>
-                        يقي من أمراض السكري لأنه يساعد على تنظيم الوجبات نتيجة تقليل الإحساس بالجوع وتقليل السكر في
-                        الدم.
-                        يحسن من الحالة النفسية ويعيد الثقة في النفس للشخص الذي يريد إنقاص وزنه لما يلاحظه من إنقاص وزنه
-                        بشكل ملحوظ.
+                        <h4 class="text-danger">صمغ الزانثان</h4>
+                        الذي يساعد على تخليص الجسم من السموم والفضلات اثناء انقاص الوزن كما أنه يقلل من معدل تخزين الدهون المتراكمة في الجسم ويساعد أيضا على سد الشهية 
                     </div>
                 </div>
                 <div class="col-12 mb-2 d-flex px-1">
                     <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">Softens & Shines</h4>
-                        يحمي من أمراض القلب والجلطات حيث يقلل من تراكم الدهون المتراكمة حول الشرايين.
+                        <h4 class="text-danger">مسحوق بودرة الأناناس</h4>
+                         يتميز بحلاوته الطبيعية التي تحد من تناول السكريات والحلويات ويبدأ في حرق الدهون بشكل سريع دون فقد اي فيتامينات نظرا لأنه يحتوي على فيتامينات تعوض الجسم عما يفقد أثناء الحرق.
+
                     </div>
                     <div class="col-sm-6">
                         <img src="./images/ananas.jpeg" style="max-width: 100%">
@@ -339,36 +395,11 @@
                         <img src="./images/kromb.jpeg" style="max-width: 100%">
                     </div>
                     <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">Tames & Treats </h4>
-                        يعالج مشاكل العظام والعمود الفقري وخشونة الركبة نتيجة تخفيف الوزن حول العظام والفقرات.
+                        <h4 class="text-danger">الكروميوم</h4>
+                        وهو عنصر مهم لزيادة معدلات الحرق في الجسم بالإضافة انه يحافظ على مستوى الجلوكوز بالدم
+
                     </div>
                 </div>
-                <!-- <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                <div class="px-5 box panel-medium">
-                    <h1>2.</h1>
-                    <p>
-                        يقي من أمراض السكري لأنه يساعد على تنظيم الوجبات نتيجة تقليل الإحساس بالجوع وتقليل السكر في الدم.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                <div class="px-5 box panel-dark">
-                    <h1>3.</h1>
-                    <p>
-                        يحمي من أمراض القلب والجلطات حيث يقلل من تراكم الدهون المتراكمة حول الشرايين.   (
-                       
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                <div class="px-5 box panel-light">
-                    <h1>4.</h1>
-                    <p>
-                        يعالج مشاكل العظام والعمود الفقري وخشونة الركبة نتيجة تخفيف الوزن حول العظام والفقرات.  
-                        
-                    </p>
-                </div>
-            </div> -->
             </div>
         </div>
         <style>
@@ -496,7 +527,7 @@
                 }
 
                 .main-card p {
-                    font-size: 11px;
+                    font-size: 12px;
                 }
             }
 
@@ -534,206 +565,98 @@
                         </article>
                     </div>
                 </div>
-                <div class="row">
-                    <!-- <div class="col-12">
-                                            <img src="images/Q.png" class="resp-img" alt="">
-                                    </div> -->
+                <div class="single-item-rtl" style="margin: 30px 10px;">
+                        <div class="col-6 col-md-3 main-card slide">
+                                <div>
+                                    <img src="./images/R1.jpg" alt="">
+                                    <h3>كريم حسني</h3>
+                                    <h4></h4>
+                                    <h4>قبل 100<span> | </span>بعد 70</h4>
+                                    <p>وزني كان عاملي مشكلة كبيرة في حياتي وجربت كل حاجة أنظمة غذائية، كريمات، تمارين، حبوب وفكرت في العمليات الجراحية لكن خوفت منها علشان مضاعفاتها لحد ما جربت Organic Balloon  ومكنتش مصدق نتائجه الرهيبة وفعليا ده كان اخر أمل ليا وبعد 3 شهور بالظبط وصلت للوزن اللي كنت بحلم بيه</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 main-card slide">
+                                <div>
+                                    <img src="./images/R2.png" alt="">
+                                    <h3>أحمد شحاتة</h3>
+                                    <h4>قبل 74<span> | </span>بعد 59</h4>
+                                    <p>جربت مئات الحاجات اللي ممكن تنقص وزني ومافيش أي حاجة جابت معايا نتيجة غير Organic Balloon، كان وزني 74 كجم وبيزيد بسرعة لحد ما نصحني دكتور التغذية بأورجانيك بالون وكان مذهل جدا خسرت 10 كجم خلال 3 أسابيع </p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mr-10-md main-card slide">
+                                <div>
+                                    <img src="./images/R3.png" alt="">
+                                    <h3>شيماء ابو الحسن</h3>
+                                    <h4>قبل 78<span> | </span>بعد 52</h4>
+                                    <p>أنا اللي أجلت فرحي علشان أخس كانت خطوة صعبة بس كان لازم أجازف واتحدي نفسي والأصعب أنه مافيش وقت دورت كتير على حاجة سريعة وفعالة ملقتش أحسن من Organic Balloon قبل فرحي بشهرين كنت وصلت للوزن اللي عايزاه وشكلي اختلف تماما </p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mr-10-md main-card slide slide-special">
+                                <div>
+                                    <img src="./images/R4.png" alt="">
+                                    <h3>أحمد ضاحي</h3>
+                                    <h4>قبل 156<span> | </span>بعد 91</h4>
+                                    <p>زي النهارده من ٣ سنين اخذت أهم قرار في حياتي .يمكن من القرارات القليلة فحياتي اللي عمري ماندمت عليها قررت وقتها اني مكملش عمري بلف علي دكاتره السكر والضغط والعظام بسبب وزني كنت ١٥٦ ك وصلت ٩١ ك بعد تقريبا 7  شهور مع Organic Balloon اوقات بعك في الحلويات بس مبقاش يهمني خلاص عرفت اتحكم في وزني إزاي</p>
+                                </div>
+                            </div>
+                      </div>
+                <!-- <div class="row">
                     <div class="col-6 col-md-3 main-card">
                         <div>
                             <img src="./images/R1.jpg" alt="">
                             <h3>كريم حسني</h3>
                             <h4></h4>
                             <h4>قبل 100<span> | </span>بعد 70</h4>
-                            <p>م لقد كنت أعانى من السمنة المفرطة الى ان وصل وزنى الى 125 كج كنت أجد صعوبة
-                                بالإمتناع عن الطعام وأصابنى الخمول والكسل حتى كدت أفقد وظيفتى ولكن
-                                بتجريب
-                                Organic Balloon فقدت 55 كج من وزنى فى شهرين فقط مما مكننى من ممارسة
-                                الرياضة بشكل
-                                طبيعى دون مشقة !</p>
+                            <p>وزني كان عاملي مشكلة كبيرة في حياتي وجربت كل حاجة أنظمة غذائية، كريمات، تمارين، حبوب وفكرت في العمليات الجراحية لكن خوفت منها علشان مضاعفاتها لحد ما جربت Organic Balloon  ومكنتش مصدق نتائجه الرهيبة وفعليا ده كان اخر أمل ليا وبعد 3 شهور بالظبط وصلت للوزن اللي كنت بحلم بيه</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 main-card">
                         <div>
                             <img src="./images/R2.png" alt="">
-                            <h3>كريم حسني</h3>
-                            <h4>قبل 100<span> | </span>بعد 70</h4>
-                            <p> بدأت قصتى عندما قمت بالزواج بدأ زيادة وزنى حينها قمت بلعب الرياضة واتباع
-                                الأكل الصحى ولكن كل هذا لم يأت بفائدة كدت أخسر زوجى وطفلتنا لكنه ساندنى
-                                حتى
-                                وصلت الى وزن كج67 بسهولة مع Organic Balloon من وزنى الأصلى 80 كج فقدت 13
-                                كج فى شهر
-                                واحد فقط!</p>
+                            <h3>أحمد شحاتة</h3>
+                            <h4>قبل 74<span> | </span>بعد 59</h4>
+                            <p>جربت مئات الحاجات اللي ممكن تنقص وزني ومافيش أي حاجة جابت معايا نتيجة غير Organic Balloon، كان وزني 74 كجم وبيزيد بسرعة لحد ما نصحني دكتور التغذية بأورجانيك بالون وكان مذهل جدا خسرت 10 كجم خلال 3 أسابيع </p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 mr-10-md main-card">
                         <div>
                             <img src="./images/R3.png" alt="">
-                            <h3>كريم حسني</h3>
-                            <h4>قبل 100<span> | </span>بعد 70</h4>
-                            <p> لقد وصل وزنى الى 60 كج من 78 بسهولة مع Organic Balloon فقد كنت قد يأست
-                                وبدأت اشعر
-                                بعدم الثقة بالنفس وأتجنب الخروج الى الشارع حتى قمت بتجربته فقد غير حياتى
-                                بفقدان 18 كج بسهولة ..شكراً لكم</p>
+                            <h3>شيماء ابو الحسن</h3>
+                            <h4>قبل 78<span> | </span>بعد 52</h4>
+                            <p>أنا اللي أجلت فرحي علشان أخس كانت خطوة صعبة بس كان لازم أجازف واتحدي نفسي والأصعب أنه مافيش وقت دورت كتير على حاجة سريعة وفعالة ملقتش أحسن من Organic Balloon قبل فرحي بشهرين كنت وصلت للوزن اللي عايزاه وشكلي اختلف تماما </p>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 mr-10-md main-card">
                         <div>
                             <img src="./images/R4.png" alt="">
-                            <h3>كريم حسني</h3>
-                            <h4>قبل 100<span> | </span>بعد 70</h4>
-                            <p> لقد وصل وزنى الى 60 كج من 78 بسهولة مع Organic Balloon فقد كنت قد يأست
-                                وبدأت اشعر
-                                بعدم الثقة بالنفس وأتجنب الخروج الى الشارع حتى قمت بتجربته فقد غير حياتى
-                                بفقدان 18 كج بسهولة ..شكراً لكم</p>
+                            <h3>أحمد ضاحي</h3>
+                            <h4>قبل 156<span> | </span>بعد 91</h4>
+                            <p>زي النهارده من ٣ سنين اخذت أهم قرار في حياتي .يمكن من القرارات القليلة فحياتي اللي عمري ماندمت عليها قررت وقتها اني مكملش عمري بلف علي دكاتره السكر والضغط والعظام بسبب وزني كنت ١٥٦ ك وصلت ٩١ ك بعد تقريبا 7  شهور مع Organic Balloon اوقات بعك في الحلويات بس مبقاش يهمني خلاص عرفت اتحكم في وزني إزاي</p>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <blockquote class="blockquote ps-review">
-                                            <p class="mb-2">
-                               
-                                            </p>
-                                            <footer class="blockquote-footer">
-                                                نرمين حسن.
-                                                <span class="text-nowrap"><i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i></span>
-                                                <br class="d-none d-lg-block">
-                                                <cite class="text-bright-green font-weight-bold text-nowrap"></cite>
-                                                <br>
-                                                <small>(قد تختلف النتائج من شخص لآخر ترجع لطبيعة الجسم وتكوينه.)</small>
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <blockquote class="blockquote ps-review">
-                                            <p class="mb-2">
-                                                ها أنا ذا استطيع ان اكل كل ما أريد بكميات معقولة لا للحمية الغذائية
-                                                الصارمة
-                                                والحرمان من الطعام انا طالب جامعى كنت أزن 90 كج وتسبب هذا بإصابتى
-                                                بالتهاب
-                                                المفاصل وعند تجريبى لOrganic Balloon استطاع ان يسد شهيتى عن الطعام ونقص
-                                                وزنى 20 كج فى
-                                                شهر ونصف فقط دون اى حمية او مجهود!
-                                            </p>
-                                            <footer class="blockquote-footer">
-                                                نبيل أحمد.
-                                                <span class="text-nowrap"><i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i></span>
-                                                <br class="d-none d-lg-block">
-                                                <cite class="text-bright-green font-weight-bold text-nowrap"></cite>
-                                                <br>
-                                                <small>(قد تختلف النتائج من شخص لآخر ترجع لطبيعة الجسم وتكوينه.)</small>
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <blockquote class="blockquote ps-review">
-                                            <p class="mb-2">
-                                                بدأت قصتى عندما قمت بالزواج بدأ زيادة وزنى حينها قمت بلعب الرياضة واتباع
-                                                الأكل الصحى ولكن كل هذا لم يأت بفائدة كدت أخسر زوجى وطفلتنا لكنه ساندنى
-                                                حتى
-                                                وصلت الى وزن كج67 بسهولة مع Organic Balloon من وزنى الأصلى 80 كج فقدت 13
-                                                كج فى شهر
-                                                واحد فقط!
-                                            </p>
-                                            <footer class="blockquote-footer">
-                                                مريم سمير.
-                                                <span class="text-nowrap"><i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i></span>
-                                                <br class="d-none d-lg-block">
-                                                <cite class="text-bright-green font-weight-bold text-nowrap"></cite>
-                                                <br>
-                                                <small>(قد تختلف النتائج من شخص لآخر ترجع لطبيعة الجسم وتكوينه.)</small>
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <blockquote class="blockquote ps-review">
-                                            <p class="mb-2">
-                                                لقد وصل وزنى الى 60 كج من 78 بسهولة مع Organic Balloon فقد كنت قد يأست
-                                                وبدأت اشعر
-                                                بعدم الثقة بالنفس وأتجنب الخروج الى الشارع حتى قمت بتجربته فقد غير حياتى
-                                                بفقدان 18 كج بسهولة ..شكراً لكم
-                                            </p>
-                                            <footer class="blockquote-footer">
-                                                عمرو هشام.
-                                                <span class="text-nowrap"><i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i></span>
-                                                <br class="d-none d-lg-block">
-                                                <cite class="text-bright-green font-weight-bold text-nowrap"></cite>
-                                                <br>
-                                                <small>(قد تختلف النتائج من شخص لآخر ترجع لطبيعة الجسم وتكوينه.)</small>
-                                            </footer>
-                                        </blockquote>
-                                    </div>
-                                </div> -->
+                </div> -->
+               
 
             </div>
         </section>
       
-        <section class="py-4 py-md-5" id="panel-dont-miss">
+        <!-- <section class="py-4 py-md-5" id="panel-dont-miss">
             <div class="container container-patch">
                 <div class="row">
                     <div class="col">
                         <article>
                             <div class="ps-body text-center px-sm-3 px-2">
-                                <h2 class="my-4">لا تفوت الفرصة لبدأ حياة صحية الأن </h2>
-                                <h2>لدينا المكونات الطبيعية والأساسية التي سيحتاجها جسمك لفقد الوزن بسهولة وبدون أى
-                                    أعراض
-                                    جانية </h2>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- <section id="panel-what-is-bhb">
-            <div class="container container-patch">
-                <div class="row">
-                    <div class="text-left col-12 col-lg-6">
-                        <article>
-                            <div class="ps-header-holder py-2 px-sm-3 px-2">
-                                <div class="row align-items-left">
-                                    <div class="col">
-                                        <header class="ps-header">
-                                            <h2 class="ps-header-title">ما هى قشور السيليوم ؟</h2>
-                                        </header>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ps-body px-sm-3 px-2">
-                                <p>
-                                    وبعد البحث عن مكونات Organic Balloon وفهم الطبيعة التي يعمل من خلالها في انقاص الوزن
-                                    تبين لنا
-                                    ان هذا المنتج يعتمد بشكل اساسي علي قشور بذرة هندية تسمي السيليوم والتي تشتهر
-                                    باحتوائها
-                                    علي نسبة عاليه جدا من الالياف الغذائية والتي تأخذ مساحة كبيرة من المعدة وتشعر من
-                                    يتناولها بالشبع مع اقل كمية طعام ومن هنا جاء شهرتها بانها افضل بديل للتكميم او بالون
-                                    المعدة
-                                </p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
+                                <h2 class="my-4"> </h2>
+                                <h2>
+                                    
+                                 </h2>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section> -->
-        <!-- <section class="panel-section-bg-image container-fluid" id="panel-bg-be-happy"></section> -->
+       
         <section class="py-4 py-md-5" id="panel-where-to-start">
             <div class="container container-patch">
                 <div class="row">
@@ -751,9 +674,7 @@
                     </div>
                     <div class="col-12 col-lg-5 order-5 order-md-0" style="display: flex; margin-bottom: 20px;">
                         <article style="margin: auto;">
-                            <!-- <div class="col text-center">
-                                <img class="ps-image img-fluid d-lg-none" src="images/log.png">
-                            </div> -->
+                          
                             <div class="ps-body text-black px-4">
                                 <p class="text-bold">
                                     : سأصف لك ما ستشعر به اثناء تجريبك لOrganic Balloon
@@ -808,7 +729,7 @@
                                         </div>
                                 <div>
                                     <img src="./images/2.png" alt="">
-                                    <p >انتفاخ اقل تبدا التجمعات الدهنية بالاختفاء تقل منطقة الوسط بمقدار 1-3 بوصات وهى افضل نتيجة يمكن للفرد ان يحصل عليها بعد اسبوع</p>
+                                    <p >منطقة البطن تصبح أكثر إستواء، ويقل الوزن بمقدار 2-4 كيلوجرامات وتبدأ بالشعور بالطاقة والحيوية</p>
 
                                 </div>
                             </div>
@@ -822,7 +743,7 @@
                                         </div>
                                 <div>
                                     <img src="./images/3.png" alt="">
-                                    <p>انتفاخ اقل تبدا التجمعات الدهنية بالاختفاء تقل منطقة الوسط بمقدار 1-3 بوصات وهى افضل نتيجة يمكن للفرد ان يحصل عليها بعد اسبوع</p>
+                                    <p>يقل الوزن بصورة كبيرة، ويقل مقاس الملابس بمقدار 4 درجات، تخسر منطقة الوسط أكثر من 4 بوصات والوزن بمقدار 9 كيلوجرامات</p>
 
                                 </div>
                             </div>
@@ -836,7 +757,7 @@
                                         </div>
                                 <div>
                                     <img src="./images/4.png" alt="">
-                                    <p>انتفاخ اقل تبدا التجمعات الدهنية بالاختفاء تقل منطقة الوسط بمقدار 1-3 بوصات وهى افضل نتيجة يمكن للفرد ان يحصل عليها بعد اسبوع</p>
+                                    <p>يقل الوزن بمقدار 40 كيلوجرامات منذ البداية، ويقل مقاس الملابس بمقدار درجتين إضافيتين، أيضا يبدو الجلد مشعا وصافيا بملمس مشدود</p>
 
                                 </div>
                             </div>
@@ -855,25 +776,15 @@
                 </div>
             </div>
                                             <div class="row">
-                <!-- <div class="col-12">
-                                        <img src="images/Q.png" class="resp-img" alt="">
-                                </div> -->
+             
                 <div class="col-6 col-md-3 main-card">
-                        <!-- <div style="text-align:center;font-size:21px;font-weight: 700;color:#fff">
-                                HEADLINE 
-                            </div> -->
+                      
                         <div class="numberCircle">1</div>
                     <div>
                         <img src="./images/5.png" class="usageImg" alt="">
-                        <h3>كريم حسني</h3>
                         <h4></h4>
-                        <h4>قبل 100<span> | </span>بعد 70</h4>
-                        <p>م لقد كنت أعانى من السمنة المفرطة الى ان وصل وزنى الى 125 كج كنت أجد صعوبة
-                            بالإمتناع عن الطعام وأصابنى الخمول والكسل حتى كدت أفقد وظيفتى ولكن
-                            بتجريب
-                            Organic Balloon فقدت 55 كج من وزنى فى شهرين فقط مما مكننى من ممارسة
-                            الرياضة بشكل
-                            طبيعى دون مشقة !</p>
+                        <h4><span></span></h4>
+                        <p>تناول ملعقة صغيرة على نصف كوب ماء فاتر أو عصير بدون سكر</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 main-card">
@@ -883,14 +794,8 @@
                         <div class="numberCircle">2</div>
                     <div>
                         <img src="./images/6.png" class="usageImg" alt="">
-                        <h3>كريم حسني</h3>
-                        <h4>قبل 100<span> | </span>بعد 70</h4>
-                        <p> بدأت قصتى عندما قمت بالزواج بدأ زيادة وزنى حينها قمت بلعب الرياضة واتباع
-                            الأكل الصحى ولكن كل هذا لم يأت بفائدة كدت أخسر زوجى وطفلتنا لكنه ساندنى
-                            حتى
-                            وصلت الى وزن كج67 بسهولة مع Organic Balloon من وزنى الأصلى 80 كج فقدت 13
-                            كج فى شهر
-                            واحد فقط!</p>
+                        <h4><span></span></h4>
+                        <p>يقلب جيدا حتى الذوبان ويتم تناوله قبل الغداء بنصف ساعة</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 mr-10-md main-card">
@@ -900,12 +805,8 @@
                         <div class="numberCircle">3</div>
                     <div>
                         <img src="./images/7.png" class="usageImg" alt="">
-                        <h3>كريم حسني</h3>
-                        <h4>قبل 100<span> | </span>بعد 70</h4>
-                        <p> لقد وصل وزنى الى 60 كج من 78 بسهولة مع Organic Balloon فقد كنت قد يأست
-                            وبدأت اشعر
-                            بعدم الثقة بالنفس وأتجنب الخروج الى الشارع حتى قمت بتجربته فقد غير حياتى
-                            بفقدان 18 كج بسهولة ..شكراً لكم</p>
+                        <h4> <span></span> </h4>
+                        <p>ينصح بشرب من 3-4 لتر ماء على مدار اليوم</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 mr-10-md main-card">
@@ -915,12 +816,8 @@
                         <div class="numberCircle">4</div>
                     <div>
                         <img src="./images/8.png" class="usageImg" alt="">
-                        <h3>كريم حسني</h3>
-                        <h4>قبل 100<span> | </span>بعد 70</h4>
-                        <p> لقد وصل وزنى الى 60 كج من 78 بسهولة مع Organic Balloon فقد كنت قد يأست
-                            وبدأت اشعر
-                            بعدم الثقة بالنفس وأتجنب الخروج الى الشارع حتى قمت بتجربته فقد غير حياتى
-                            بفقدان 18 كج بسهولة ..شكراً لكم</p>
+                        <h4> <span></span> </h4>
+                        <p>يكرر مرة آخرى قبل وجبة العشاء عند اللزوم (في حالة الشعور بالجوع الشديد)</p>
                     </div>
                 </div>
             </div>
@@ -959,21 +856,10 @@
                                         كيلو
                                         اسبوعيا وهو رقم اكتر من ممتاز خاصة مع منتج طبيعي بالكامل . لذلك يعتبر من افضل
                                         المنتجات
-                                        الطبيعية في انقاص الوزن ويكفي انه منتج مرخص من وزارة الصحة
+                                        الطبيعية في انقاص الوزن ويكفي انه منتج مرخص من وزارة الصحة، خالي من المواد الاصطناعية والكيميائية لأن تكوينه من نباتات طبيعية ومكونات عالية الجودة. نحافظ على هذه النزاهة على قيد الحياة من خلال 30 يوما مع ضمان استرداد الأموال إذا لم تكن راضيًا تمامًا لأي سبب من الأسباب نحن نؤمن بالحياة الصحية
                                     </p>
-                                    <p>
-                                        خالي من المواد الاصطناعية والكيميائية. لأن تكوينه من نباتات طبيعية ومكونات عالية
-                                        الجودة.
-                                        نحافظ على هذه النزاهة على قيد الحياة من خلال 30 يوما يوجد ضمان استرداد الأموال
-                                        يومًا
-                                        إذا
-                                        لم تكن راضيًا تمامًا لأي سبب من الأسباب نحن نؤمن بالحياة الصحية ، بما في ذلك
-                                        اتباع
-                                        نظام
-                                        غذائي متوازن ونمط حياة نشط. سواء كنت جديدًا في نظام Organic Balloon الغذائي أم
-                                        لا ،
-                                        فإن فريقنا
-                                        موجود لمساعدتك على تحقيق أهدافك .
+                                    <p>                         
+                                                                                                                                         
                                     </p>
                                 </div>
                             </article>
@@ -997,12 +883,7 @@
                                         <img class=" img-fluid" src="images/guar.png" style="    max-height: 170px;
                                         height: auto !important;">
                                     </div>
-                                    <!-- <div class="col-12 text-center">
-                                    <header class="ps-header text-black">
-                                        <h2 class="ps-header-title">مع ضمان استرجاع خلال 30 يوم </h2>
-                                        <hr class="ps-header-title-line">
-                                    </header>
-                                </div> -->
+                                   
                                 </div>
                             </div>
                             <div class="ps-body text-black px-4">
@@ -1021,56 +902,7 @@
                 <div class="row">
                     <div class="col-md-6" style="margin: auto;
                 margin-top: 20px; margin-bottom: 60px;">
-                        <!-- <form class="mod form" id="mod"
-                        style="  padding:20px; background-color: #265e85 !important; border-radius: 5px 20px 5px;"
-                        method="post" onsubmit=" return validateForm(event);"
-                        action="http://sehhaegypt.info/products/request-product">
-                        <section class="get-sec">
-                            <div class="counter-red row">
-                                <div class="col-12">
-                                    <p class="description">تبقى حتى نهاية تخفيض السعر<span id="con">:</span></p>
-                                </div>
-                                <div class="timer clearfix">
-                                    <div class="row">
-                                        <div class="col-4 counter-under">
-                                            <div class="count hours"><span>0</span><span>0</span></div>
-                                            <div class="text">ساعات</div>
-                                        </div>
-                                        <div class="col-4 counter-under">
-                                            <div class="count minutes"><span>0</span><span>0</span></div>
-                                            <div class="text">دقائق</div>
-                                        </div>
-                                        <div class="col-4 counter-under">
-                                            <div class="count seconds"><span>0</span><span>0</span></div>
-                                            <div class="text">ثواني</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                         
-                        </section>
-                        <div class="contentinp" style="max-width:unset !important">
-                            <div class="form-group input">
-                                <label class="" for="name">ادخل اسمك</label>
-                                <input type="text" name="name" id="name" class="cinp  user form-control" required="">
-                            </div>
-                            <div class="form-group input">
-                                <label class="" for="number">ادخل الهاتف </label>
-                                <input type="number" name="number" id="number" class="cinp  phone form-control"
-                                    pattern="[٠-٩0-9]{11}" title="أدخل رقم هاتفك" required="">
-                            </div>
-                            <div class="form-group input">
-                                <label class="">ادخل العنوان</label>
-                                <input type="text" id="address" name="address" class="cinp  user form-control"
-                                    required="">
-                                <input type="hidden" name="product_slug" value="{{{ product_slug }}}">
-                                <input type="hidden" name="sale_page_slug" value="{{{ sale_page_slug }}}">
-                            </div>
-                            <input class="btn-block1 btn btn-block2 rush btn-main btn rush" type="submit"
-                                style="padding:15px;margin:auto;display:block;" value=" أطلبه الأن بسعر 690ج">
-                            <div class="s-vs10"></div>
-                        </div>
-                    </form> -->
+                       
 
                         <!-- Material form login -->
                         <style>
@@ -1230,8 +1062,11 @@
     </div>
     <!-- Plugins -->
     <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/migration.js"></script>
+    <script src="js/slick.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
     <!-- Bootstrap core JavaScript -->
@@ -1253,10 +1088,12 @@
             }
         }
     </script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <script src="js/popper-1.14.7.min.js"></script>
     <script src="js/smooth-scroll.js"></script><!-- Custom JS -->
     <script src="js/global.js"></script>
+   
     <script type="text/javascript">
         initializeSmoothScroll('.anchor-link', function () {
             $('#page-nav-mobile-toggler[aria-expanded="true"]').click();
@@ -1357,6 +1194,54 @@ function move() {
     }
 }
         
+    </script>
+    <script>
+//   $('.single-item-rtl').slick({
+// });
+$('.single-item-rtl').slick({
+    rtl: true,
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 440,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+$(".slide").css({"height": $(".slide-special").height() + "px"} );
+
+setInterval(function(){ 
+    $(".slide").css({"height": $(".slide-special").height() + "px"} );
+}, 
+3000);
+	
+	
     </script>
 </body>
 
