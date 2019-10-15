@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" name="viewport">
     <meta content="{{{ csrf_token }}}" name="csrf-token">
     <!-- <link href="css/bootstrap-4.3.0.min.css" rel="stylesheet"> -->
-
+    <script type="text/javascript" src="js/jquery.js"></script>
     <link href="css/mdb.css" rel="stylesheet">
     <link href="css/rtlbootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all-5.7.1.min.css" rel="stylesheet">
@@ -20,6 +20,15 @@
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/slider.css" rel="stylesheet">
 <style>
+    .centervertical{
+        display: flex !important;
+    justify-content: center;
+    align-items: center;
+    }
+    .mr-t-b-30{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
         .firstConatinerImg{
   position: relative;
         }
@@ -237,7 +246,7 @@
                 </div>
             </div>
         </section>
-        <div class="container container-patch">
+        <div class="container container-patch mr-t-b-30">
             <div class="row" >
                     <section class="py-4 py-md-5" style="background: lightblue;" id="panel-why-keto">
                     <div class="col">
@@ -361,7 +370,7 @@
                 </div>
             </div>
             <div class="row d-flex ps-body">
-                <div class="col-12 mb-2 d-flex px-1">
+                <div class="col-12 mb-2 d-flex px-1 centervertical">
                     <div class="col-sm-6 small-sm">
                         <h4 class="text-danger">قشور السيليوم</h4>
                           تحتوي على نسبة عالية من الألياف التي تساعد على الإحساس بالشبع بنسبة 70% فعند اختلاطها بالماء تتضخم وتملأ المعدة بطريقة تشبه بالون المعدة فتعطي الإحساس بالشبع وإبطاء عملية تفريغ المعدة لمدة تزيد عن 7 ساعات 
@@ -370,7 +379,7 @@
                         <img src="./images/cel.jpeg" style="max-width: 100%">
                     </div>
                 </div>
-                <div class="col-12 mb-2 d-flex px-1">
+                <div class="col-12 mb-2 d-flex px-1 centervertical">
                     <div class="col-sm-6">
                         <img src="./images/sansa.jpeg" style="max-width: 100%">
                     </div>
@@ -379,7 +388,7 @@
                         الذي يساعد على تخليص الجسم من السموم والفضلات اثناء انقاص الوزن كما أنه يقلل من معدل تخزين الدهون المتراكمة في الجسم ويساعد أيضا على سد الشهية 
                     </div>
                 </div>
-                <div class="col-12 mb-2 d-flex px-1">
+                <div class="col-12 mb-2 d-flex px-1 centervertical">
                     <div class="col-sm-6 small-sm">
                         <h4 class="text-danger">مسحوق بودرة الأناناس</h4>
                          يتميز بحلاوته الطبيعية التي تحد من تناول السكريات والحلويات ويبدأ في حرق الدهون بشكل سريع دون فقد اي فيتامينات نظرا لأنه يحتوي على فيتامينات تعوض الجسم عما يفقد أثناء الحرق.
@@ -389,7 +398,7 @@
                         <img src="./images/ananas.jpeg" style="max-width: 100%">
                     </div>
                 </div>
-                <div class="col-12 mb-2 d-flex px-1">
+                <div class="col-12 mb-2 d-flex px-1 centervertical">
                     <div class="col-sm-6">
                         <img src="./images/kromb.jpeg" style="max-width: 100%">
                     </div>
@@ -671,6 +680,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="col-12 col-lg-5 order-5 order-md-0" style="display: flex; margin-bottom: 20px;">
                         <article style="margin: auto;">
                           
@@ -699,13 +710,13 @@
 
                             </div>
                         </article>
-                    </div>
-                    <div class="col-12 col-lg-7  text-center align-self-center">
-                        <div class="row progress-container">
+                        </div>
+                        <div class="col-12 col-lg-7 text-center align-self-center">
+                <div id="levels-item-rtl" style="margin: 30px 10px;background: #509e9e !important;padding:10px">
                             <!-- <div class="col-12">
                                                     <img src="images/Q.png" class="resp-img" alt="">
                                             </div> -->
-                            <div class="col-6 col-md-3 main-card progressCard">
+                            <div class="col-6 col-md-3 main-card progressCard slide2">
                                 <div style="font-size:26px;font-weight: 700;">
                                     اليوم <span style="font-size: 32px;
                                     font-weight: 900;
@@ -718,7 +729,7 @@
                                    <p >انتفاخ اقل تبدا التجمعات الدهنية بالاختفاء تقل منطقة الوسط بمقدار 1-3 بوصات وهى افضل نتيجة يمكن للفرد ان يحصل عليها بعد اسبوع</p>
                                 </div>
                             </div>
-                            <div class="col-6 col-md-3 main-card progressCard">
+                            <div class="col-6 col-md-3 main-card progressCard slide2">
                                     <div style="font-size:26px;font-weight: 700;">
                                             اليوم <span style="font-size: 32px;
                                             font-weight: 900;
@@ -732,7 +743,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card progressCard">
+                            <div class="col-6 col-md-3 mr-10-md main-card progressCard slide2">
                                     <div style="font-size:26px;font-weight: 700;">
                                             اليوم <span style="font-size: 32px;
                                             font-weight: 900;
@@ -746,7 +757,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card progressCard">
+                            <div class="col-6 col-md-3 mr-10-md main-card progressCard slide2 slidespecial">
                                     <div style="font-size:26px;font-weight: 700;">
                                             اليوم <span style="font-size: 32px;
                                             font-weight: 900;
@@ -763,7 +774,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+        </div>
+
         </section>
         <div class="container">
             <div class="row ">
@@ -774,8 +787,7 @@
                     </header>
                 </div>
             </div>
-                                            <div class="row">
-             
+            <div class="row">
                 <div class="col-6 col-md-3 main-card">
                       
                         <div class="numberCircle">1</div>
@@ -821,6 +833,7 @@
                 </div>
             </div>
 
+
             <!-- <div class="row">
                 <div class="col-12">
                     <img src="images/Levels.png" class="resp-img" alt="">
@@ -830,7 +843,7 @@
         <!-- <section class="panel-section-bg-image container-fluid" id="panel-bg-be-active"></section> -->
         <div class="row" style="margin-right: 0; margin-left: 0;">
            
-            <section class="col-12" id="panel-quality-guarantee" style="padding:10px;margin-top:40px; ">
+            <!-- <section class="col-12" id="panel-quality-guarantee" style="padding:10px;margin-top:40px; ">
                 <div class="container container-patch">
                     <div class="row">
                         <div class="col-12 col-lg-6">
@@ -868,7 +881,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <div class="col-12" style="padding: 0;margin-top:40px">
                 <img src="images/price.jpg" alt="" class="resp-img">
             </div>
@@ -1063,7 +1076,6 @@
     <!-- JQuery -->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/migration.js"></script>
     <script src="js/slick.js"></script>
     </script>
@@ -1232,10 +1244,57 @@ $('.single-item-rtl').slick({
     // instead of a settings object
   ]
 });
+
+$('#levels-item-rtl').slick({
+  rtl: true,
+  dots: true,
+  infinite: true,
+  autoplay:true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 440,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
 $(".slide").css({"height": $(".slide-special").height() + "px"} );
 
 setInterval(function(){ 
     $(".slide").css({"height": $(".slide-special").height() + "px"} );
+}, 
+3000);
+
+$(".slide2").css({"height": $(".slidespecial").height() + "px"} );
+
+setInterval(function(){ 
+$(".slide2").css({"height": $(".slidespecial").height() + "px"} );
 }, 
 3000);
 	
