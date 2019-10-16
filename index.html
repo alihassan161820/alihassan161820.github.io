@@ -168,6 +168,14 @@
                 </div>
                 <div class="col-md-6" style="z-index:1">
                     <img src="./images/log.png" style="max-width:100%">
+                    <div style="text-align: center;">
+                        <a style="min-width: 200px;display: inline-block;" class="ReadMore order-btn nav-btn_color font-weight-bold px-4 my-0 py-2"
+                            role="button">اقرا المزيد</a>
+                    </div>
+                    <div style="text-align: center;margin-top:20px;margin-bottom:20px;">
+                        <a style="min-width: 200px;display: inline-block;" class="order-now btn-primary order-btn nav-btn_color font-weight-bold px-4 my-0 py-2"
+                            role="button">اتصل الان</a>
+                    </div>
                     <div class="row firstSectionPhotosleft" style="    display: flex;
                     justify-content: center;">
                             <div class="col-2">
@@ -425,7 +433,7 @@
                 margin-left: 0 !important;
             }
         </style>
-        <div class="container container-patch" id="panel-how-keto-works">
+        <div class="container container-patch readMore" id="panel-how-keto-works">
             <div class="row ">
                 <div class="col text-center">
                     <header class="ps-header text-black">
@@ -992,7 +1000,7 @@
                                                         </div>
                                                     </div>
                             <div class="card-body px-lg-5 pt-0">
-                                <form class="text-center" style="color: #757575;" method="post"
+                                <form id="form" class="text-center" style="color: #757575;" method="post"
                                     onsubmit=" return validateForm(event);"
                                     action="http://sehhaegypt.info/products/request-product">
                                     <section class="get-sec">
@@ -1282,6 +1290,18 @@ $('#levels-item-rtl').slick({
     // instead of a settings object
   ]
 });
+
+    $('.ReadMore').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $(".readMore").offset().top
+            }, 1000);
+        })
+
+        $('.order-now').on('click', function () {
+            $('html, body').animate({
+                scrollTop: $("#form").offset().top
+            }, 1500);
+        })
 
 
 $(".slide").css({"height": $(".slide-special").height() + "px"} );
