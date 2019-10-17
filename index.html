@@ -500,7 +500,7 @@
         <style>
             .main-card img {
                 width: 100%;
-                height: auto;
+                height: 170px;
                 margin-top: 20px;
                 margin-bottom: 5px;
             }
@@ -1312,13 +1312,15 @@ setInterval(function(){
 3000);
 
 setTimeout(() => {
-    
+    if($(".slidespecial").height() > 300)
 $(".slide2").css({"height": $(".slidespecial").height() + "px"} );
+}, 5000);
+
 setInterval(function(){ 
+    if($(".slidespecial").height() > 300)
 $(".slide2").css({"height": $(".slidespecial").height() + "px"} );
 }, 
-3000);
-}, 2000);
+5000);
 
 	
 	
