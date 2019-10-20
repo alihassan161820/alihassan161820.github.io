@@ -55,7 +55,7 @@ a {
 }
 
 .secondsvg::before{
-    background-image: url('./../images/2svg.jpg');
+    background-image: url('./../images/2svg.png');
     content: '';
 	color: #707070;
 	display: inline-block;
@@ -165,7 +165,7 @@ li.list-icon-feature-belly::before {
 
 #panel-no-strict-dieting {
 	background: linear-gradient(rgba(38, 94, 133, 0.8), rgba(81, 107, 126, 0.8)),
-	url('../images/mia.jpg') center/auto 150% no-repeat;
+	url('../images/mia.jfif') center/auto 150% no-repeat;
 }
 
 #panel-easy-to-use {
@@ -175,7 +175,7 @@ li.list-icon-feature-belly::before {
 
 #panel-keto-for-you {
 	background: linear-gradient(rgba(94, 191, 187, 0.8), rgba(94, 191, 187, 0.8)),
-	url('../images/fit.png') center/auto 150% no-repeat;
+	url('../images/fit.jfif') center/auto 150% no-repeat;
 }
 
 #panel-bg-confident {
