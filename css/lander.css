@@ -1036,7 +1036,7 @@ section .color-box .fas {
 }
 
 #prices .inputGroup {
-	background-color: #ededed;
+	background-color: #007bff;
 	display: block;
 	margin: 10px 0;
 	position: relative;
@@ -1046,7 +1046,7 @@ section .color-box .fas {
 	width: 100%;
 	display: block;
 	text-align: center;
-	color: #3c454c;
+	color: #fff;
 	cursor: pointer;
 	position: relative;
 	z-index: 2;
@@ -1058,7 +1058,7 @@ section .color-box .fas {
 	height: 10px;
 	border-radius: 50%;
 	content: '';
-	background-color: #17A2B8 ;
+	background-color: #00c851;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -1111,7 +1111,7 @@ section .color-box .fas {
 #prices .form {
 	padding: 0 16px;
 	max-width: 550px;
-	margin: 50px auto;
+	margin: auto;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 36px;
