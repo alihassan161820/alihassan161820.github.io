@@ -1,1376 +1,186 @@
-<!DOCTYPE html>
-<html class="gr__ketoweightloss_com" dir="rtl" lang="ar">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" name="viewport">
-    <meta content="{{{ csrf_token }}}" name="csrf-token">
-    <!-- <link href="css/bootstrap-4.3.0.min.css" rel="stylesheet"> -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <link href="css/mdb.css" rel="stylesheet">
-    <link href="css/rtlbootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all-5.7.1.min.css" rel="stylesheet">
-    <link href="css/defaults.css" rel="stylesheet">
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/font-futura.min.css" rel="stylesheet">
-    <link href="css/font-gilroy.min.css" rel="stylesheet">
-    <link href="css/flags32-iso-3166-1-alpha-2.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/lander.css" rel="stylesheet">
-    <link href="css/slick.css" rel="stylesheet">
-    <link href="css/slider.css" rel="stylesheet">
-<style>
-    .centervertical{
-        display: flex !important;
-    justify-content: center;
-    align-items: center;
-    }
-    .mr-t-b-30{
-        margin-top:20px;
-        margin-bottom:20px;
-    }
-        .firstConatinerImg{
-  position: relative;
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Application</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Bootstrap RTL core CSS     -->
+    <link href="assets/css/bootstrap-rtl.min.css" rel="stylesheet"/>
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap RTL Version CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard-rtl.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href="assets/css/font-awsome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/earlyaccess/droidarabickufi.css' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet"/>
+    <link href="assets/css/datatable.css" rel="stylesheet"/>
+    <link href="assets/css/datatable-buttons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <style>
+        tr th {
+            text-align: center;
         }
-        .firstConatinerImg::after {
-  content: "";
-  background-size: contain;
-  background-image:url('./images/bg.png');
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
     </style>
-
-
 </head>
+<body>
 
-<body data-gr-c-s-loaded="true" data-offset="111.328" data-spy="scroll" data-target="#page-nav">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="page-nav" style="position: relative">
-        <div class="container">
-            <a class="order-btn font-weight-bold px-4 flex-column d-flex" id="free_shipping" role="button"
-                style="width: 120px;">
-                <div class="row pr-3" style="border: 1px solid rgba(0,0,0,.1); border-radius:.25rem">
-                    <div class="col-6 px-0">
-                        <div class="text-center" style="margin-right:-5px;">
-                            <ul class="f32 m-0 p-0" style="height:33px;">
-                                <li class="flag eg m-0 p-0"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 px-0 text-left">
-                        <div class="text-center shipping-text pt-1" style="line-height:12px;padding-left:6px;">
-                            <span style="font-size:12px;font-weight:normal">شحن</span> <span
-                                style="font-weight:normal">مجاني</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="pe-7s-menu"></i>
+                        <p>عرض</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="create.html">
+                        <i class="pe-7s-add-user"></i>
+                        <p>إضافة</p>
+                    </a>
+                </li>
+                <li>
+            </ul>
         </div>
-    </nav>
-    <main>
-        <div class="container-fluid">
-            <div class="row firstConatinerImg" style="padding:10px;">
-                <div class="col-12">
-                    <h2 class="mh-title-2 mb-0 mt-1 text-danger">
-                        البديل الطبيعي والمنافس الوحيد لعمليات بالون المعدة
-                        تخسيس من 10-15 كجم في 30 يوم فقط
-                        <br>
-                </div>
-                <div class="col-md-6 mh-list-holder" style="z-index: 2;
-            /* display: flex; */
-            align-items: center;">
-                    <ul class="mh-list mt-2 mb-1 mb-sm-2 px-0 pt-md-2">
-                        <li class="list-icon-feature-belly">يعطي الإحساس بالشبع وسد الشهية بنسبة تصل إلى 70%
-                            من آول آسبوع</li>
-                        <li class="list-icon-feature-apple">يزيد من معدل حرق الدهون بنسبة 25٪ بعد أول 10 ايام
-                        </li>
-                        <li class="list-icon-feature-man">يتخلص من السموم بشكل آمن وطبيعي</li>
-                        <li class="list-icon-feature-pill-bottle">يمد الجسم بالطاقة والشعور بالمزاج الجيد
-                        </li>
-                        <li class="list-icon-feature-face-hands">يفتت الدهون المتراكمة بالجسم بطريقة فعالة
-                            وآمنة</li>
-                    </ul>
-                    <style>
-                        .txt{
-                            text-align: center;
-    font-size: 14px;
-                        }
-                    </style>
-                     <div class="row firstSectionPhotos" style="    display: flex;
-                     justify-content: center;">
-                             <div class="col-2">
-                                 <img alt="Vegetarian" src="images/icon_nutrition_gluten_free.svg">
-                                 <div class="txt">Gluten-Free</div>
-                             </div>
-                             <div class="col-2">
-                                 <img alt="Gluten free" src="images/icon_nutrition_all_natural.svg">
-                                 <div class="txt">100% Natural</div>
-                             </div>
-                             <div class="col-2">
-                                 <img alt="Dairy free" src="images/icon_nutrition_dairy_free.svg">
-                                 <div class="txt">Dairy-Free</div>
-                             </div>
-                             <div class="col-2">
-                                 <img alt="GMO free" src="images/icon_nutrition_gmo_free.svg">
-                                 <div  class="txt">GMO-Free</div>
-                             </div>
-                             <div class="col-2">
-                                 <img alt="Soy free" src="images/icon_nutrition_soy_free.svg">
-                                 <div class="txt">Soy-Free</div>
-                             </div>
-                         </div>
-                         <style>
-                             .cc {
-                                 display: flex;
-                                 flex-direction: row;
-                                 justify-content: center;
-                             }
-                             @media (max-width: 769px){
-                                 .firstSectionPhotosleft{
-                                     display: flex !important;
-                                 }
-                                 .firstSectionPhotos{
-                                     display: none !important;
-                                 }
-                             }
-                             @media (min-width: 769px){
-                                 .firstSectionPhotosleft{
-                                     display: none !important;
-                                 }
-                                 .firstSectionPhotos{
-                                     display: flex !important;
-                                 }
-                             }
-                         </style>
-                         <div class="row firstSectionPhotos" style="    display: flex;
-                         justify-content: center;align-items: center;">
-                             <div class="col-3 col-md-2">
-                                 <img class="resp-img" src="images/stamp.png">
-                             </div>
-                             <div class="col-3 col-md-2 cc">
-                                 <img class="resp-img" src="images/icon_gmp.svg">
-                             </div>
-                             <div class="col-3 col-md-2 cc">
-                                 <img class="resp-img" src="images/icon_iso_9001.svg">
-                             </div>
-                             <div class="col-3 col-md-2 cc">
-                                 <img class="resp-img" src="images/icon_fssai.svg">
-                             </div>
-                         </div>
-                  
-                </div>
-                <div class="col-md-6" style="z-index:1">
-                    <img src="./images/log.png" style="max-width:100%">
-                    <!-- <div style="text-align: center;">
-                        <a style="min-width: 200px;display: inline-block;" class="ReadMore order-btn nav-btn_color font-weight-bold px-4 my-0 py-2"
-                            role="button">اقرا المزيد</a>
-                    </div> -->
-                    <div style="text-align: center;margin-bottom:20px;">
-                        <a style="min-width: 200px;display: inline-block;" class="order-now btn-primary order-btn nav-btn_color font-weight-bold px-4 my-0 py-2"
-                            role="button">اطلب الان</a>
-                    </div>
-                    <div class="row firstSectionPhotosleft" style="    display: flex;
-                    justify-content: center;">
-                            <div class="col-2">
-                                <img alt="Vegetarian" src="images/icon_nutrition_gluten_free.svg">
-                                <div class="txt">Gluten-Free</div>
-                            </div>
-                            <div class="col-2">
-                                <img alt="Gluten free" src="images/icon_nutrition_all_natural.svg">
-                                <div class="txt">100% Natural</div>
-                            </div>
-                            <div class="col-2">
-                                <img alt="Dairy free" src="images/icon_nutrition_dairy_free.svg">
-                                <div class="txt">Dairy-Free</div>
-                            </div>
-                            <div class="col-2">
-                                <img alt="GMO free" src="images/icon_nutrition_gmo_free.svg">
-                                <div  class="txt">GMO-Free</div>
-                            </div>
-                            <div class="col-2">
-                                <img alt="Soy free" src="images/icon_nutrition_soy_free.svg">
-                                <div class="txt">Soy-Free</div>
-                            </div>
-                        </div>
-                        <style>
-                            .cc {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: center;
-                            }
-                        </style>
-                        <div class="row firstSectionPhotosleft" style="    display: flex;
-                        justify-content: center;align-items: center;height: 140;
-    max-height: 140px;">
-                            <div class="col-3 col-md-2">
-                                <img class="resp-img" src="images/stamp.png">
-                            </div>
-                            <div class="col-3 col-md-2 cc">
-                                <img class="resp-img" src="images/icon_gmp.svg">
-                            </div>
-                            <div class="col-3 col-md-2 cc">
-                                <img class="resp-img" src="images/icon_iso_9001.svg">
-                            </div>
-                            <div class="col-3 col-md-2 cc">
-                                <img class="resp-img" src="images/icon_fssai.svg">
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <section class="container container-patch">
-            <div class="row color-box py-5">
-                <div class="col">
-                    <h3 class="text-center pb-4">العقبات التي تواجهك أثناء فقدان وزنك ستنتهي مع Organic Balloon</h3>
-                    <div class="row d-flex justify-content-center" style="font-size:18px;">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="svgAdd firstsvg">بطء معدل الحرق الناتج عن عوامل كثيرة أهمها التعرض
-                                    لضغوط نفسية</li>
-                                <li class="svgAdd secondsvg">صعوبة التخلص من الترهلات فى البطن والخصر والأرداف
-                                </li>
-                                <li  class="svgAdd thirdsvg">الدهون العنيدة غير
-                                    المرغوب
-                                    فيها
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="svgAdd fourthsvg">التعب وانخفاض الطاقة نتيجة قلة الفيتامينات
-                                    والمعادن</li>
-                                <li class="svgAdd fifthsvg">االإكتئاب والقلق من عدم الوصول للوزن المرغوب فيه
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="container container-patch mr-t-b-30">
-            <div class="row" >
-                    <section class="py-4 py-md-5" style="background: lightblue;" id="panel-why-keto">
-                    <div class="col">
-                        <article>
-                         
-                            <div class="ps-body text-center px-sm-3 px-2">
-                                <p>
-                                    على عكس أدوية التخسيس التي تسبب خلل في وظائف الجسم وتؤثر على كفاءة القلب وخلايا المخ والمناعة، يكمن السر في اختلاف Organic Balloon عن أي منتج آخر فيأنه أكثر فاعلية وآمان في تخليص الجسم نت الدهون والترهلات دون رجعة وبدون حدوث خلل في وظائف الجسم للوصول إلى الوزن المثالي بصورة صحية وآمنة، لذلك يناسب أورجانيك بالون جميع أنماط حياتكم وأعماركم  
-                                </p>
-                                <p>
-                                                                               
-                                                            </p>
-                                <p></p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                </div>
-            </div>
-        <div class="two-by-two-panel-section-holder container container-patch">
-            <div class="row">
-                <div class="col-12 col-sm-6 pr-1 py-4 py-md-5" id="panel-proven-results">
-                    <div class="container text-center py-4 py-md-5 h-100">
-                        <header class="ps-header text-white">
-                            <h2 class="ps-header-title">لقد اثبت جدارته بـ*:</h2>
-                        </header>
-                        <div class="ps-body text-white">
-                            <p>
-                                أكثر من 5000 عميل سعيد بما وصل له من نتائج مذهلة لـتجريب Organic Balloon فرصة
-                                رائعة للا
-                                نضمام إلينا الآنوالاقتراب من تحقيق هدفك في الوصول للوزن المثالي
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 pl-1 py-4 py-md-5" id="panel-no-strict-dieting">
-                    <div class="container text-center py-4 py-md-5 h-100">
-                        <header class="ps-header text-white">
-                            <h2 class="ps-header-title"> وداعا للحميات الغذائية القاسية: *</h2>
-                        </header>
-                        <div class="ps-body text-white">
-                            <p>
-                                لا داعي للقلق بشأن قضاء وقت صعب في اتباع نظام غذائي لانقاص وزنك بعد الأن . يمكنك التمتع
-                                بنتائج مذهلة دون اتباعه والتمتع بالأطعمة المفضلة
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 pr-1 py-0 py-sm-1" id="panel-easy-to-use">
-                    <div class="container text-center py-4 py-md-5 h-100">
-                        <header class="ps-header text-white">
-                            <h2 class="ps-header-title">إنه سهل الاستخدام :*</h2>
-                        </header>
-                        <div class="ps-body text-white">
-                            <p>
-                                بالتأكيد ليس هناك برنامج غذائي معقد مع Organic Balloon ولن تحتاج أيضًا إالى كبسولات لأنه
-                                ببساطة
-                                مكملاً غذائياً عالي الجودة وها هى طريقة استخدامه
-                                (وضع كيس واحد على كوب من الماء أو عصير طازج حسب اختيارك قبل الوجبة بنصف ساعة) 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 pl-1 py-0 py-sm-1" id="panel-keto-for-you">
-                    <div class="container text-center py-4 py-md-5 h-100">
-                        <header class="ps-header text-white">
-                            <h2 class="ps-header-title">Organic Balloon لأجلك: *</h2>
-                        </header>
-                        <div class="ps-body text-white">
-                            <p>
-                                أصبح فقدان الوزن أمراً سهلاً مع Organic Balloon لأنه سيساعدك على إستعادة حياتك من جديد
-                                وتعويض كل ما
-                                فاتك .
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <section class="py-4 py-md-5" id="panel-why-keto-works">
-            <div class="container container-patch">
+    </div>
+
+    <div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
-                        <article>
-                            <div class="ps-header-holder text-center py-2">
-                                <div class="row align-items-center center">
-                                    <div class="col">
-                                        <header class="ps-header text-black">
-                                            <h2 class="ps-header-title">سر فاعلية Organic Balloon  </h2>
-                                            <hr class="ps-header-title-line">
-                                        </header>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ps-body text-center px-sm-3 px-2">
-                                <p>
-                                    السر في فاعليته هو احتوائه على قشور السيليوم فهو نظام رائع لحرق الدهون من جميع أجزاء
-                                    الجسم والوصول للوزن المثالي المرغوب فيه، ويحافظ ايضاً معدل السكر فى الجسم حتى لا تصاب
-                                    بمرض السكري بسبب نقص حاد فى الانسولين بالجسم
-                                </p>
-                                <p>
-                                    بالجسم
-                                </p>
-                                <p></p>
-                                <a class="order-btn font-weight-bold px-4 nav-btn_color my-0 py-2" role="button">احصل
-                                    عليه
-                                    بسعر 690 بدلاً من 1000ج </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <div class="container container-patch" id="panel-how-keto-works">
-            <div class="row ">
-                <div class="col text-center">
-                    <header class="ps-header text-black">
-                        <h2 class="ps-header-title">ما الذي يميز Organic Ballon عن أي منتج آخر؟</h2>
-                        <hr class="ps-header-title-line">
-                    </header>
-                </div>
-            </div>
-            <div class="row d-flex ps-body">
-                <div class="col-12 mb-2 d-flex px-1 centervertical">
-                    <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">قشور السيليوم</h4>
-                          تحتوي على نسبة عالية من الألياف التي تساعد على الإحساس بالشبع بنسبة 70% فعند اختلاطها بالماء تتضخم وتملأ المعدة بطريقة تشبه بالون المعدة فتعطي الإحساس بالشبع وإبطاء عملية تفريغ المعدة لمدة تزيد عن 7 ساعات 
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="./images/cel.jpeg" style="max-width: 100%">
-                    </div>
-                </div>
-                <div class="col-12 mb-2 d-flex px-1 centervertical">
-                    <div class="col-sm-6">
-                        <img src="./images/sansa.jpeg" style="max-width: 100%">
-                    </div>
-                    <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">صمغ الزانثان</h4>
-                        الذي يساعد على تخليص الجسم من السموم والفضلات اثناء انقاص الوزن كما أنه يقلل من معدل تخزين الدهون المتراكمة في الجسم ويساعد أيضا على سد الشهية 
-                    </div>
-                </div>
-                <div class="col-12 mb-2 d-flex px-1 centervertical">
-                    <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">مسحوق بودرة الأناناس</h4>
-                         يتميز بحلاوته الطبيعية التي تحد من تناول السكريات والحلويات ويبدأ في حرق الدهون بشكل سريع دون فقد اي فيتامينات نظرا لأنه يحتوي على فيتامينات تعوض الجسم عما يفقد أثناء الحرق.
-
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="./images/ananas.jpeg" style="max-width: 100%">
-                    </div>
-                </div>
-                <div class="col-12 mb-2 d-flex px-1 centervertical">
-                    <div class="col-sm-6">
-                        <img src="./images/kromb.jpeg" style="max-width: 100%">
-                    </div>
-                    <div class="col-sm-6 small-sm">
-                        <h4 class="text-danger">الكروميوم</h4>
-                        وهو عنصر مهم لزيادة معدلات الحرق في الجسم بالإضافة انه يحافظ على مستوى الجلوكوز بالدم
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>
-            .resp-img {
-                width: 100%;
-                height: auto;
-                max-width:100%;
-            }
-
-            .mr0 {
-                margin-right: 0 !important;
-            }
-
-            .ml0 {
-                margin-left: 0 !important;
-            }
-        </style>
-        <div class="container container-patch readMore" id="panel-how-keto-works">
-            <div class="row ">
-                <div class="col text-center">
-                    <header class="ps-header text-black">
-                        <h2 class="ps-header-title">مميزات أخرى ل Organic Balloon لفقدان وزنك بصورة طبيعية ؟</h2>
-                        <hr class="ps-header-title-line">
-                    </header>
-                </div>
-            </div>
-            <div class="row d-flex ps-body">
-                <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                    <div class="row  box panel-light  d-flex ml0 mr0">
-                        <div class="col-8  m-auto">
-                            <p>
-                                يحمي من أمراض السكري لأنه يساعد على تنظيم الوجبات نتيجة تقليل الإحساس بالجوع وتقليل
-                                السكر في الدم.
-                            </p>
-                        </div>
-                        <div class="col-4 pr-0  m-auto">
-                            <img src="images/sugar.png" class="resp-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                    <div class="row  box panel-medium  d-flex ml0 mr0">
-                        <div class="col-8 m-auto">
-                            <p>
-                                يحمي من أمراض القلب والجلطات حيث يقلل من تراكم الدهون المتراكمة حول الشرايين.
-                            </p>
-                        </div>
-                        <div class="col-4 pr-0  m-auto">
-                            <img src="images/heart.png" class="resp-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                    <div class="row  box panel-dark  d-flex ml0 mr0">
-                        <div class="col-8  m-auto">
-                            <p>
-                                يعالج مشاكل العظام والعمود الفقري وخشونة الركبة نتيجة تخفيف الوزن حول العظام والفقرات.
-                            </p>
-                        </div>
-                        <div class="col-4 pr-0  m-auto">
-                            <img src="images/arms2.jfif " class="resp-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mb-2 d-flex px-1">
-                    <div class="row  box panel-light  d-flex ml0 mr0">
-                        <div class="col-8  m-auto">
-                            <p>
-                                يعوض الجسم عما يفقده من فيتامينات ومعادن أثناء فترة التخسيس لأنه يعتبر مكمل غذائي يحتوي
-                                على مجموعة فيتامينات ...،...،… فلا يحدث خلل في وظائف الجسم أثناء إستخدامه.
-                            </p>
-                        </div>
-                        <div class="col-4 pr-0  m-auto">
-                            <img src="images/vit.jfif" class="resp-img" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
-
-        <style>
-            .main-card img {
-                width: 100%;
-                height: auto;
-                margin-top: 20px;
-                margin-bottom: 5px;
-            }
-
-            .slide2.main-card img,.slidespecial.main-card img {
-                height: 170px !important;
-            }
-
-
-            .progressCard{
-                background: #fff !important;
-                color: #509e9e !important;
-                text-align: center !important;
-                background-clip: content-box !important;
-
-            }
-
-            .progressCard p{
-                font-weight: 500;
-            }
-
-            .progress-container{
-                background: #509e9e;
-                padding: 25px;
-            }
-
-            .main-card h3 {
-                text-align: center;
-                font-weight: 600;
-            }
-
-            @media (max-width:768px) {
-                .mr-10-md {
-                    margin-top: 10px
-                }
-            }
-
-            @media (max-width:600px) {
-                .main-card h3 {
-                    font-size: 1rem;
-                }
-
-                .main-card h4 {
-                    font-size: .9rem;
-                }
-
-                .main-card p {
-                    font-size: 12px;
-                }
-            }
-
-            .main-card h4 {
-                text-align: center;
-                font-weight: 600;
-            }
-
-            .main-card>div {
-                padding: 11px;
-
-            }
-
-            .main-card {
-                background-color: #509e9e;
-                /* margin: 10px 20px; */
-                text-align: justify;
-                font-size: 15px;
-                color: white;
-                border-radius: 1%;
-                background-clip: content-box;
-                /* box-shadow: 1px 6px 13px #1f1616; */
-            }
-        </style>
-
-        <section class="panel-section py-4 py-md-5" id="panel-customer-reviews">
-            <div class="container container-patch">
-                <div class="row">
-                    <div class="col">
-                        <article style="text-align:center">
-                            <header class="ps-header text-black">
-                                <h1 class="ps-header-title">! تُرى ما يقوله بعض عملائنا </h1>
-                                <hr class="ps-header-title-line border-black ml-0" style="width: 100%;">
-                            </header>
-                        </article>
-                    </div>
-                </div>
-                <div class="single-item-rtl" style="margin: 10px 10px;">
-                        <div class="col-6 col-md-3 main-card slide">
-                                <div>
-                                    <img src="./images/R1.jpg" alt="">
-                                    <h3>كريم حسني</h3>
-                                    <h4></h4>
-                                    <h4>قبل 100<span> | </span>بعد 70</h4>
-                                    <p>وزني كان عاملي مشكلة كبيرة في حياتي وجربت كل حاجة أنظمة غذائية، كريمات، تمارين، حبوب وفكرت في العمليات الجراحية لكن خوفت منها علشان مضاعفاتها لحد ما جربت Organic Balloon  ومكنتش مصدق نتائجه الرهيبة وفعليا ده كان اخر أمل ليا وبعد 3 شهور بالظبط وصلت للوزن اللي كنت بحلم بيه</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 main-card slide">
-                                <div>
-                                    <img src="./images/R2.png" alt="">
-                                    <h3>أحمد شحاتة</h3>
-                                    <h4>قبل 74<span> | </span>بعد 59</h4>
-                                    <p>جربت مئات الحاجات اللي ممكن تنقص وزني ومافيش أي حاجة جابت معايا نتيجة غير Organic Balloon، كان وزني 74 كجم وبيزيد بسرعة لحد ما نصحني دكتور التغذية بأورجانيك بالون وكان مذهل جدا خسرت 10 كجم خلال 3 أسابيع </p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card slide">
-                                <div>
-                                    <img src="./images/R3.png" alt="">
-                                    <h3>شيماء ابو الحسن</h3>
-                                    <h4>قبل 78<span> | </span>بعد 52</h4>
-                                    <p>أنا اللي أجلت فرحي علشان أخس كانت خطوة صعبة بس كان لازم أجازف واتحدي نفسي والأصعب أنه مافيش وقت دورت كتير على حاجة سريعة وفعالة ملقتش أحسن من Organic Balloon قبل فرحي بشهرين كنت وصلت للوزن اللي عايزاه وشكلي اختلف تماما </p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card slide-special">
-                                <div>
-                                    <img src="./images/R4.png" alt="">
-                                    <h3>أحمد ضاحي</h3>
-                                    <h4>قبل 156<span> | </span>بعد 91</h4>
-                                    <p>زي النهارده من ٣ سنين اخذت أهم قرار في حياتي .يمكن من القرارات القليلة فحياتي اللي عمري ماندمت عليها قررت وقتها اني مكملش عمري بلف علي دكاتره السكر والضغط والعظام بسبب وزني كنت ١٥٦ ك وصلت ٩١ ك بعد تقريبا 7  شهور مع Organic Balloon اوقات بعك في الحلويات بس مبقاش يهمني خلاص عرفت اتحكم في وزني إزاي</p>
-                                </div>
-                            </div>
-                      </div>
-                <!-- <div class="row">
-                    <div class="col-6 col-md-3 main-card">
-                        <div>
-                            <img src="./images/R1.jpg" alt="">
-                            <h3>كريم حسني</h3>
-                            <h4></h4>
-                            <h4>قبل 100<span> | </span>بعد 70</h4>
-                            <p>وزني كان عاملي مشكلة كبيرة في حياتي وجربت كل حاجة أنظمة غذائية، كريمات، تمارين، حبوب وفكرت في العمليات الجراحية لكن خوفت منها علشان مضاعفاتها لحد ما جربت Organic Balloon  ومكنتش مصدق نتائجه الرهيبة وفعليا ده كان اخر أمل ليا وبعد 3 شهور بالظبط وصلت للوزن اللي كنت بحلم بيه</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 main-card">
-                        <div>
-                            <img src="./images/R2.png" alt="">
-                            <h3>أحمد شحاتة</h3>
-                            <h4>قبل 74<span> | </span>بعد 59</h4>
-                            <p>جربت مئات الحاجات اللي ممكن تنقص وزني ومافيش أي حاجة جابت معايا نتيجة غير Organic Balloon، كان وزني 74 كجم وبيزيد بسرعة لحد ما نصحني دكتور التغذية بأورجانيك بالون وكان مذهل جدا خسرت 10 كجم خلال 3 أسابيع </p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 mr-10-md main-card">
-                        <div>
-                            <img src="./images/R3.png" alt="">
-                            <h3>شيماء ابو الحسن</h3>
-                            <h4>قبل 78<span> | </span>بعد 52</h4>
-                            <p>أنا اللي أجلت فرحي علشان أخس كانت خطوة صعبة بس كان لازم أجازف واتحدي نفسي والأصعب أنه مافيش وقت دورت كتير على حاجة سريعة وفعالة ملقتش أحسن من Organic Balloon قبل فرحي بشهرين كنت وصلت للوزن اللي عايزاه وشكلي اختلف تماما </p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 mr-10-md main-card">
-                        <div>
-                            <img src="./images/R4.png" alt="">
-                            <h3>أحمد ضاحي</h3>
-                            <h4>قبل 156<span> | </span>بعد 91</h4>
-                            <p>زي النهارده من ٣ سنين اخذت أهم قرار في حياتي .يمكن من القرارات القليلة فحياتي اللي عمري ماندمت عليها قررت وقتها اني مكملش عمري بلف علي دكاتره السكر والضغط والعظام بسبب وزني كنت ١٥٦ ك وصلت ٩١ ك بعد تقريبا 7  شهور مع Organic Balloon اوقات بعك في الحلويات بس مبقاش يهمني خلاص عرفت اتحكم في وزني إزاي</p>
-                        </div>
-                    </div>
-                </div> -->
-               
-
-            </div>
-        </section>
-      
-        <!-- <section class="py-4 py-md-5" id="panel-dont-miss">
-            <div class="container container-patch">
-                <div class="row">
-                    <div class="col">
-                        <article>
-                            <div class="ps-body text-center px-sm-3 px-2">
-                                <h2 class="my-4"> </h2>
-                                <h2>
-                                    
-                                 </h2>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-       
-        <section class="" id="panel-where-to-start">
-            <div class="container container-patch">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ps-header-holder">
-                            <div class="row align-items-center text-center">
-                                <div class="col">
-                                    <header class="ps-header text-black text-center">
-                                        <h2 class="ps-header-title">ما تشعر به عند تجريبك Organic Balloon </h2>
-                                        <hr class="ps-header-title-line">
-                                    </header>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-12 col-lg-5 order-5 order-md-0" style="display: flex; margin-top: 20px;كmargin-bottom: 20px;">
-                        <article style="margin: auto;">
-                          
-                            <div class="ps-body text-black px-4">
-                                <p class="text-bold">
-                                    : سأصف لك ما ستشعر به اثناء تجريبك لOrganic Balloon
-                                </p>
-                                <ul>
-                                    <li>تقليل مشاعر الجوع</li>
-                                    <li>رفع الأداء العقلي</li>
-                                    <li>زيادة الأداء البدني</li>
-                                    <li>طاقة تدوم أطول</li>
-                                    <li>تحسين المزاج</li>
-                                    <li>وعلى مدار 7 أيام وجدنا ان هذه النتائج قد تحققت عندما تم استهلاك قشر سيلليوم مع
-                                        وجبات
-                                        الطعام
-                                    </li>
-                                </ul>
-                                <br>
-                                <div style="    text-align: center;">
-                                    <a class="order-btn nav-btn_color font-weight-bold px-4 my-0 py-2"
-                                        role="button">أطلبه
-                                        الأن
-                                        بخصم %30 </a>
-                                </div>
-
-                            </div>
-                        </article>
-                        </div>
-                        <div class="col-12 col-lg-7 text-center align-self-center">
-                <div id="levels-item-rtl" style="margin: 10px 10px;background: #509e9e !important;padding:10px">
-                            <!-- <div class="col-12">
-                                                    <img src="images/Q.png" class="resp-img" alt="">
-                                            </div> -->
-                            <div class="col-6 col-md-3 main-card progressCard slide2">
-                                <div style="font-size:26px;font-weight: 700;">
-                                    اليوم <span style="font-size: 32px;
-                                    font-weight: 900;
-                                    display: inline-block;
-                                    /* padding-top: 9px; */
-                                    transform: translateY(5px);">7</span>
-                                </div>
-                                <div>
-                                    <img src="./images/1.png" alt="">
-                                   <p >انتفاخ اقل تبدا التجمعات الدهنية بالاختفاء تقل منطقة الوسط بمقدار 1-3 بوصات وهى افضل نتيجة يمكن للفرد ان يحصل عليها بعد اسبوع</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 main-card progressCard slide2">
-                                    <div style="font-size:26px;font-weight: 700;">
-                                            اليوم <span style="font-size: 32px;
-                                            font-weight: 900;
-                                            display: inline-block;
-                                            /* padding-top: 9px; */
-                                            transform: translateY(5px);">14</span>
-                                        </div>
-                                <div>
-                                    <img src="./images/2.png" alt="">
-                                    <p >منطقة البطن تصبح أكثر إستواء، ويقل الوزن بمقدار 2-4 كيلوجرامات وتبدأ بالشعور بالطاقة والحيوية</p>
-
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card progressCard slide2">
-                                    <div style="font-size:26px;font-weight: 700;">
-                                            اليوم <span style="font-size: 32px;
-                                            font-weight: 900;
-                                            display: inline-block;
-                                            /* padding-top: 9px; */
-                                            transform: translateY(5px);">28</span>
-                                        </div>
-                                <div>
-                                    <img src="./images/3.png" alt="">
-                                    <p>يقل الوزن بصورة كبيرة، ويقل مقاس الملابس بمقدار 4 درجات، تخسر منطقة الوسط أكثر من 4 بوصات والوزن بمقدار 9 كيلوجرامات</p>
-
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3 mr-10-md main-card progressCard slidespecial">
-                                    <div style="font-size:26px;font-weight: 700;">
-                                            اليوم <span style="font-size: 32px;
-                                            font-weight: 900;
-                                            display: inline-block;
-                                            /* padding-top: 9px; */
-                                            transform: translateY(5px);">60</span>
-                                        </div>
-                                <div>
-                                    <img src="./images/4.png" alt="">
-                                    <p>يقل الوزن بمقدار 40 كيلوجرامات منذ البداية، ويقل مقاس الملابس بمقدار درجتين إضافيتين، أيضا يبدو الجلد مشعا وصافيا بملمس مشدود</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-
-        </section>
-        <div class="container">
-            <div class="row ">
-                <div class="col text-center">
-                    <header class="ps-header text-black">
-                        <h2 class="ps-header-title">طريقة الاستخدام الصحيحة</h2>
-                        <hr class="ps-header-title-line">
-                    </header>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-3 main-card">
-                      
-                        <div class="numberCircle">1</div>
-                    <div>
-                        <img src="./images/5.png" class="usageImg" alt="">
-                        <h4></h4>
-                        <h4><span></span></h4>
-                        <p>تناول ملعقة صغيرة على نصف كوب ماء فاتر أو عصير بدون سكر</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 main-card">
-                        <!-- <div style="text-align:center;font-size:21px;font-weight: 700;color:#fff">
-                                HEADLINE 
-                            </div> -->
-                        <div class="numberCircle">2</div>
-                    <div>
-                        <img src="./images/6.png" class="usageImg" alt="">
-                        <h4><span></span></h4>
-                        <p>يقلب جيدا حتى الذوبان ويتم تناوله قبل الغداء بنصف ساعة</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mr-10-md main-card">
-                        <!-- <div style="text-align:center;font-size:21px;font-weight: 700;color:#fff">
-                                HEADLINE 
-                            </div> -->
-                        <div class="numberCircle">3</div>
-                    <div>
-                        <img src="./images/7.png" class="usageImg" alt="">
-                        <h4> <span></span> </h4>
-                        <p>ينصح بشرب من 3-4 لتر ماء على مدار اليوم</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mr-10-md main-card">
-                        <!-- <div style="text-align:center;font-size:21px;font-weight: 700;color:#fff">
-                                HEADLINE 
-                            </div> -->
-                        <div class="numberCircle">4</div>
-                    <div>
-                        <img src="./images/8.png" class="usageImg" alt="">
-                        <h4> <span></span> </h4>
-                        <p>يكرر مرة آخرى قبل وجبة العشاء عند اللزوم (في حالة الشعور بالجوع الشديد)</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- <div class="row">
-                <div class="col-12">
-                    <img src="images/Levels.png" class="resp-img" alt="">
-                </div>
-            </div> -->
-        </div>
-        <!-- <section class="panel-section-bg-image container-fluid" id="panel-bg-be-active"></section> -->
-        <div class="row" style="margin-right: 0; margin-left: 0;">
-           
-            <!-- <section class="col-12" id="panel-quality-guarantee" style="padding:10px;margin-top:40px; ">
-                <div class="container container-patch">
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <article>
-                                <div class="ps-header-holder">
-                                    <div class="row align-items-center">
-                                        <header class="ps-header">
-                                            <h2 class="ps-header-title text-white  px-4"> ترى ما هو ضمان الفاعلية الذى
-                                                نقدمه
-                                                لك
-                                                ! </h2>
-                                        </header>
-                                    </div>
-                                </div>
-                                <div class="ps-body text-white px-4">
-                                    <p>
-                                        لا يعتمد في الاساس علي التلاعب بالهرمونات فهو فقط يجبرك علي تناول كميات اقل من
-                                        الاكل
-                                        ويخلصك من الدهون الزائدة وبعد فترة سيتعود جسمك علي الاكل بكميات قليلة حتي بدون
-                                        استخدام
-                                        هذا المنتج وكانت اغلب قصص النجاح مع المنتج تقول انهم استطاعوا انقاص ما يقرب من 3
-                                        كيلو
-                                        اسبوعيا وهو رقم اكتر من ممتاز خاصة مع منتج طبيعي بالكامل . لذلك يعتبر من افضل
-                                        المنتجات
-                                        الطبيعية في انقاص الوزن ويكفي انه منتج مرخص من وزارة الصحة، خالي من المواد الاصطناعية والكيميائية لأن تكوينه من نباتات طبيعية ومكونات عالية الجودة. نحافظ على هذه النزاهة على قيد الحياة من خلال 30 يوما مع ضمان استرداد الأموال إذا لم تكن راضيًا تمامًا لأي سبب من الأسباب نحن نؤمن بالحياة الصحية
-                                    </p>
-                                    <p>                         
-                                                                                                                                         
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-12 col-lg-6 text-center align-self-center">
-                            <img class="ps-image img-fluid" src="images/quality_icons.png">
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <div class="col-12" style="padding: 0;margin-top:40px">
-                <img src="images/price2.jfif" alt="" class="resp-img">
-            </div>
-            <!-- <div class="col-12">
-            <div class="row">
-                <div class="col-2 text-right">
-                    خصم<br>30%<br>لفترة محدودة
-                    </div>
-                    <div class="col-8">
-                        <img src="./images/log.png"  style="max-width: 100%;">
-                    </div>
-                    <div  class="col-2 text-left">
-                            احصل عليه<br>بسعر<br>550ج
-                            <br>
-                            1000ج
-                            </div>
-            </div>
-        </div> -->
-
-            <div class="container container-patch">
-                <div class="row">
-                    <div class="col">
-                        <article>
-                            <div class="ps-header-holder">
-                                <div class="row align-items-start">
-                                    <div class="col-12 text-center">
-                                        <img class=" img-fluid" src="images/guar.png" style="    max-height: 170px;
-                                        height: auto !important;">
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <div class="ps-body text-black px-4">
-                                <p>
-                                    عبر سنوات من العمل الشاق في محاولة العثور على علاج نهائى لفقدان الوزن في مكمل غذائى
-                                    طبيعي بالكامل ، حققنا أخيرًا هذا الحلم من خلال Organic Balloon. سوف تستعيدى وزنك فى
-                                    وقت قياسى
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container"  id="prices">
-                <div class="row">
-                    <div class="col-12">
-                        <form class="form" style="padding:10px;">
-                            <div class="inputGroup">
-                                <input id="radio1" name="radio" type="radio"/>
-                                <label for="radio1">1 عبوة 550 جنيه بدل من 800 جنيه</label>
-                            </div>
-                            <div class="inputGroup">
-                                <input id="radio2" name="radio" type="radio"/>
-                                <label for="radio2">2 عبوة 1000 جنيه بدل من 1600 جنيه</label>
-                            </div>
-                            <div class="inputGroup">
-                                    <input id="radio3" name="radio" type="radio"/>
-                                    <label for="radio3">3 عبوة 1400 جنيه بدل من 2400 جنيه</label>
-                                </div>
-                          </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6" style="margin: auto;
-                margin-top: 20px; margin-bottom: 60px;">
-                       
-
-                        <!-- Material form login -->
-                        <style>
-                            .right-label {
-                                right: 0 !important;
-                                left: unset !important;
-                            }
-
-                            .fbtn {
-                                background-color: #17A2B8 !important;
-                                color: white !important;
-                            }
-
-                            .get-sec .timer .text {
-                                color: #757575;
-                            }
-                        </style>
-                         <style>
-                                form label {
-                                    color: white;
-                                    font-size: 20px;
-                                }
-                        
-                                .counter-row .col-3 div {
-                                    color: white;
-                                    border-radius: 5px 5px 5px 5px;
-                                    background-color: #0D7174 !important;
-                                }
-                        
-                                .counter-span {
-                                    font-size: 25px;
-                                }
-                        
-                                .w3-light-grey {
-                                    width: 100%;
-                                    background-color: #fc5a5a;
-                                    direction: ltr;
-                                }
-                        
-                                #myBar {
-                                    width: 1%;
-                                    height: 30px;
-                                    background-color: #fcdbdb;
-                                    direction: ltr;
-                                }
-                        
-                                .inventory {
-                                    font-size: 23px;
-                                }
-                        
-                                #inventory {
-                                    color: #fc5a5a;
-                                    font-weight: bold;
-                                }
-                                .formClass{
-                                    display: none;
-                                }
-                                #counter{
-                                    margin-bottom: 50px;
-                                }
-                            </style>
+                    <div class="col-md-12">
                         <div class="card">
-                            <h5 class="card-header info-color white-text text-center py-4"
-                            style="background-color:#17A2B8 !important">
-                            <strong>تبقى حتى نهاية تخفيض السعر</strong>
-                        </h5>
-                        
-                                                <div class="row justify-content-center mb-2" style="margin-top:20px">
-                                                        <div class="col-md-12" style="padding-right:30px;padding-left:30px;">
-                                                            <span class="inventory" style="text-align: center;
-                                                            display: block;">
-                                                                اسرع ! فقط <span id="inventory">553</span> عبوة في المخزن</span>
-                                                            <div class="w3-light-grey">
-                                                                <div id="myBar" class="w3-container w3-green" style="height:24px;width:2%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                            <div class="card-body px-lg-5 pt-0">
-                                <form id="form" class="text-center" style="color: #757575;" method="post"
-                                    onsubmit=" return validateForm(event);"
-                                    action="http://sehhaegypt.info/products/request-product">
-                                    <section class="get-sec">
-                                        <div class="counter-red row">
-                                            <!-- <div class="col-12">
-                                            <p class="description"><span id="con">:</span></p>
-                                        </div> -->
-                                            <div class="timer clearfix">
-                                                <div class="row">
-                                                    <div class="col-4 counter-under">
-                                                        <div class="count seconds"><span>0</span><span>0</span></div>
-                                                        <div class="text">ثواني</div>
-                                                    </div>
-                                                    <div class="col-4 counter-under">
-                                                        <div class="count minutes"><span>0</span><span>0</span></div>
-                                                        <div class="text">دقائق</div>
-                                                    </div>
-                                                    <div class="col-4 counter-under">
-                                                        <div class="count hours"><span>0</span><span>0</span></div>
-                                                        <div class="text">ساعات</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <div class="md-form">
-                                        <input type="text" id="name" name="name" class="cinp  user form-control"
-                                            required>
-                                        <label for="name" class="right-label">ادخل اسمك</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <input type="number" name="number" id="number" class="cinp  phone form-control"
-                                            pattern="[٠-٩0-9]{11}" title="أدخل رقم هاتفك" required="">
-                                        <label for="number" class="right-label">ادخل الهاتف</label>
-                                    </div>
-                                    <div class="md-form">
-                                            <input type="number" name="number" id="number" class="cinp  phone form-control"
-                                                pattern="[٠-٩0-9]{11}" title="أدخل رقم هاتفك" required="">
-                                            <label for="number" class="right-label">رقم هاتف إضافى</label>
-                                        </div>
-                                    <div class="md-form">
-                                        <input type="text" id="address" name="address" class="cinp  user form-control"
-                                            required>
-                                        <label for="address" class="right-label">ادخل العنوان</label>
-                                    </div>
-                                    <input type="hidden" name="product_slug" value="{{{ product_slug }}}">
-                                    <input type="hidden" name="sale_page_slug" value="{{{ sale_page_slug }}}">
-                                    <!-- Sign in button -->
-                                    <button
-                                        class="fbtn btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
-                                        type="submit">اطلبه الأن بسعر 690ج</button>
-
-                                </form>
-                                <!-- Form -->
-                                
+                            <div class="header">
+                                <h4 class="title">الطلبات</h4>
+                            </div>
+                            <div class="content table-responsive table-full-width" style="padding: 20px">
+                                <table class="table table-sm table-dark table-hover table-striped" id="data-table">
+                                    <thead>
+                                    <tr>
+                                        <th>رقم الطلب</th>
+                                        <th>اسم مقدم الطلب</th>
+                                        <th>جهة مقدم الطلب</th>
+                                        <th>تاريخ التقديم</th>
+                                        <th>تاريخ انهاء الطلب</th>
+                                        <th>حالة الطلب</th>
+                                        <th>ملاحظات</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="text-center">
+                                        <td>1</td>
+                                        <td>Dakota Rice</td>
+                                        <td>$36,738</td>
+                                        <td>Niger</td>
+                                        <td>Oud-Turnhout</td>
+                                        <td>Oud-Turnhout</td>
+                                        <td>Oud-Turnhout</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <!-- Material form login -->
-                        <span style="display: inline-block;text-align: center;margin-top:10px;">
-                        النتائج والأرقام المذكورة توضح مدي جودة المنتج وتأثيره على أكبر عدد من عملائنا ولكن تختلف  نتيجة المنتج وفاعليته من شخص لأخر تبعاً للفروق بين طبيعة أجسامهم
-                    </span>
                     </div>
-                </div>
-            </div>
-    </main>
-    <div aria-hidden="true" aria-labelledby="terms-privacy-modal-title" class="modal fade" id="terms-privacy-modal"
-        role="dialog" tabindex="-1">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="terms-privacy-modal-title">Modal title</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body"></div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Plugins -->
-    <!-- JQuery -->
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/migration.js"></script>
-    <script src="js/slick.js"></script>
-    </script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript"
-        src="js/bootstrapjs.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.js">
-    </script>
-    <script>
-        function validateForm(e) {
-            // var myRe = /(^[0][1][0]|[0][1][2]|[0][1][1]|[0][1][5])/;
-            // x.match(myRe);
-            var x = document.getElementById('phoneNumber').value;
-            var re = new RegExp('[0][1][0]|[0][1][2]|[0][1][1]|[0][1][5]');
-            myArray = re.exec(x);
-            if (myArray == null) {
-                e.preventDefault();
-                alert('Please enter a valid phone numebr')
-            }
-        }
-    </script>
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <script src="js/popper-1.14.7.min.js"></script>
-    <script src="js/smooth-scroll.js"></script><!-- Custom JS -->
-    <script src="js/global.js"></script>
-   
-    <script type="text/javascript">
-        initializeSmoothScroll('.anchor-link', function () {
-            $('#page-nav-mobile-toggler[aria-expanded="true"]').click();
-        });
-        $('#terms-privacy-modal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget);
-            $(this).find('.modal-body').load(button.data('modal-source'));
-            $('#terms-privacy-modal-title').text(button.data('modal-title'));
-        });
-        (function () {
-            let scroll_offset = $('#page-nav').outerHeight();
-            $('body').attr('data-offset', scroll_offset + 1);
-            $('.anchor-link').attr('data-offset-top', scroll_offset);
-        })();
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 200) {
-                $('#free_shipping').hide().removeClass('d-flex');
-                $('#order_now').show().addClass('d-flex');
-            } else {
-                $('#order_now').hide().removeClass('d-flex');
-                $('#free_shipping').show().addClass('d-flex');
-            }
-        });
-        $(document).ready(function () {
-            function update() {
-                var Now = new Date(),
-                    Finish = new Date();
-                Finish.setHours(12);
-                Finish.setMinutes(59);
-                Finish.setSeconds(59);
-                if (Now.getHours() === 12 && Now.getMinutes() === 59 && Now.getSeconds === 59) {
-                    Finish.setDate(Finish.getDate() + 1);
-                }
-                var sec = Math.floor((Finish.getTime() - Now.getTime()) / 1000);
-                var hrs = Math.floor(sec / 3600);
-                sec -= hrs * 3600;
-                var min = Math.floor(sec / 60);
-                sec -= min * 60;
-                $(".timer .hours").html(pad(hrs));
-                $(".timer .minutes").html(pad(min));
-                $(".timer .seconds").html(pad(sec));
-                setTimeout(update, 200);
-            }
-
-            function pad(s) {
-                s = ("00" + s).substr(-2);
-                return "<span>" + s[0] + "</span><span>" + s[1] + "</span>";
-            }
-            update();
-        });
-
-        let started = 0;
-
-$(function () {
-    var oTop = $('.counter-red').offset().top - window.innerHeight;
-    $(window).scroll(function () {
-        var pTop = $(window).scrollTop();
-        // console.log(pTop + ' - ' + oTop); //just for your debugging
-        if (pTop > oTop && started == 0) {
-            started = 1;
-            move();
-        }
-    });
-});
-
-
-var inventory = [553, 423, 390, 218, 212, 120, 80, 30];
-
-function move() {
-    var elem = document.getElementById("myBar");
-    var invetorySpan = document.getElementById('inventory');
-
-    var width = 1;
-    var id = setInterval(frame, 600);
-    var inventoryInterval;
-
-    function frame() {
-        if (width >= 40) {
-            clearInterval(id);
-            inventoryInterval = setInterval(decreaseInventory, 1000)
-        } else {
-            width++;
-            elem.style.width = width + '%';
-            invetorySpan.innerText = inventory[0]
-        }
-    }
-
-    function decreaseInventory() {
-        if (width >= 80) {
-            clearInterval(inventoryInterval);
-        } else {
-            if (width % 10 == 0)
-                invetorySpan.innerText = inventory[width / 10];
-
-            width++;
-            elem.style.width = width + '%';
-        }
-    }
-}
-        
-    </script>
-    <script>
-//   $('.single-item-rtl').slick({
-// });
-$('.single-item-rtl').slick({
-    rtl: true,
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 440,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-
-$('#levels-item-rtl').slick({
-  rtl: true,
-  dots: true,
-  infinite: true,
-  autoplay:true,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 440,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-
-    $('.ReadMore').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $(".readMore").offset().top
-            }, 1000);
-        })
-
-        $('.order-now').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $("#form").offset().top
-            }, 1500);
-        })
-
-
-$(".slide").css({"height": $(".slide-special").height() + "px"} );
-
-setInterval(function(){ 
-    $(".slide").css({"height": $(".slide-special").height() + "px"} );
-}, 
-3000);
-
-setTimeout(() => {
-    if($(".slidespecial").height() > 300)
-$(".slide2").css({"height": $(".slidespecial").height() + "px"} );
-}, 5000);
-
-setInterval(function(){ 
-    if($(".slidespecial").height() > 300)
-$(".slide2").css({"height": $(".slidespecial").height() + "px"} );
-}, 
-5000);
-
-	
-	
-    </script>
+</div>
 </body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+<script src="assets/js/datatable.js"></script>
+<script src="assets/js/datatable-buttons.js"></script>
+<script src="assets/js/datatable-flash.js"></script>
+<script src="assets/js/datatable-jszip.js"></script>
+<script src="assets/js/datatable-html5.js"></script>
+<script src="assets/js/datatable-print.js"></script>
+
+<script>
+
+
+    function fetchJSONFile(path, callback) {
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function() {
+            if (httpRequest.readyState === 4) {
+                if (httpRequest.status === 200) {
+                    var data = JSON.parse(httpRequest.responseText);
+                    if (callback) callback(data);
+                }
+            }
+        };
+        httpRequest.open('GET', path);
+        httpRequest.send();
+    }
+
+    // this requests the file and executes a callback with the parsed result once
+    //   it is available
+    fetchJSONFile('data.json', function(data){
+        // do something with your data
+        console.log(data);
+    });
+
+
+    $(document).ready(function () {
+        $('#data-table').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            language: {search: ""},
+            dom: "<'row'<'col-sm-4'f><'col-sm-3'B><'col-sm-5'l>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "ip",
+            buttons: [
+                {
+                    extend:    'excelHtml5',
+                    text:      '<i class="fa fa-file-excel-o"></i>',
+                    titleAttr: 'Excel'
+                }
+            ]
+        });
+
+        $('#data-table_filter label input').addClass('form-control');
+        $('.buttons-excel').addClass('btn btn-default btn-fill');
+    });
+</script>
 </html>
